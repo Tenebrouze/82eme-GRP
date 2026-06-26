@@ -3,253 +3,234 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>82ème Groupe — Régiment Napoléonien</title>
-  <link rel="icon" type="image/png" href="logo.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <title>82ème GRP - Holdfast Nations At War</title>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar" id="navbar">
     <div class="nav-container">
-      <a href="#" class="nav-logo">
-       
-        <img src="logo.png" alt="82ème GRP" class="nav-logo-img">
-        
+      <a href="#accueil" class="nav-logo">
+        <span>82<sup>ème</sup> GRP</span>
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#histoire">Histoire</a></li>
-        <li><a href="#piliers">Valeurs</a></li>
-        <li><a href="#about">À Propos</a></li>
-        <li><a href="#recrutement">Recrutement</a></li>
+        <li><a href="#piliers">Le Régiment</a></li>
+        <li><a href="#recrutement">Rejoindre</a></li>
       </ul>
-      <a href="https://discord.gg/votre-lien" class="btn-discord" target="_blank">
-        ⚔ Rejoindre
+      <a href="https://discord.gg/TONLIEN" class="btn-discord" target="_blank">
+        Discord
       </a>
       <button class="nav-toggle" id="navToggle">☰</button>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero" id="accueil">
+  <!-- HERO -->
+  <section id="accueil" class="hero">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <span class="hero-badge">⚔ Régiment Napoléonien ⚔</span>
-
-      <!-- LOGO ICI -->
-      <img src="logo.png" alt="Logo 82ème GRP" class="hero-logo">
-
-      <span class="hero-number">82</span>
-      <span class="hero-name">Groupe — Régiment d'Infanterie</span>
-      <p class="hero-quote">"L'honneur guide nos pas, la gloire couronne nos efforts"</p>
-
+      <div class="hero-badge">⚜️ Holdfast: Nations At War ⚜️</div>
+      <h1 class="hero-title">
+        <span class="hero-number">82<sup>ème</sup></span>
+        <span class="hero-name">Groupe de Reconnaissance<br>et de Projection</span>
+      </h1>
+      <p class="hero-quote">« L'honneur ne se rend pas, il se conquiert. »</p>
       <div class="hero-stats">
-        <div class="stat">
-          <span class="stat-number">82</span>
-          <span class="stat-label">Régiment</span>
-        </div>
-        <span class="stat-divider">|</span>
-        <div class="stat">
-          <span class="stat-number">1804</span>
-          <span class="stat-label">Fondation</span>
-        </div>
-        <span class="stat-divider">|</span>
         <div class="stat">
           <span class="stat-number">50+</span>
           <span class="stat-label">Membres</span>
         </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-number">Actif</span>
+          <span class="stat-label">Statut</span>
+        </div>
+        <div class="stat-divider">|</div>
+        <div class="stat">
+          <span class="stat-number">FR</span>
+          <span class="stat-label">Régiment</span>
+        </div>
       </div>
-
       <div class="hero-buttons">
-        <a href="#recrutement" class="btn-primary large">⚔ Nous Rejoindre</a>
+        <a href="https://discord.gg/TONLIEN" class="btn-primary" target="_blank">Rejoindre le Discord</a>
         <a href="#histoire" class="btn-secondary">Notre Histoire</a>
       </div>
     </div>
-    <div class="hero-scroll" onclick="document.getElementById('piliers').scrollIntoView({behavior:'smooth'})">▼</div>
+    <div class="hero-scroll">↓</div>
   </section>
 
-  <!-- ===== PILIERS ===== -->
-  <section class="piliers-section" id="piliers">
+  <!-- PILIERS -->
+  <section id="piliers" class="piliers-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-sub">Nos Fondements</span>
-        <h2>Les Piliers du Régiment</h2>
-        <div class="divider">⚜</div>
+        <p class="section-sub">Ce qui nous définit</p>
+        <h2>Nos Valeurs</h2>
+        <div class="divider"><span>⚜️</span></div>
       </div>
       <div class="piliers-grid">
         <div class="pilier-card">
-          <div class="pilier-icon">⚔</div>
+          <div class="pilier-icon">⚔️</div>
           <h3>Honneur</h3>
-          <p>L'honneur est la pierre angulaire de notre régiment. Chaque soldat porte fièrement les couleurs du 82ème avec dignité et droiture.</p>
+          <p>Chaque soldat du 82ème GRP porte fièrement les couleurs du régiment. L'honneur est notre boussole, sur le champ de bataille comme en dehors.</p>
         </div>
         <div class="pilier-card featured">
-          <div class="pilier-icon">🏛</div>
+          <div class="pilier-icon">🎖️</div>
           <h3>Discipline</h3>
-          <p>La discipline forge les grands soldats. Nos membres s'entraînent avec rigueur pour maintenir l'excellence tactique sur le champ de bataille.</p>
+          <p>La rigueur militaire est au cœur de notre fonctionnement. Formations, ordres de bataille et hiérarchie sont respectés avec le plus grand sérieux.</p>
         </div>
         <div class="pilier-card">
-          <div class="pilier-icon">🎖</div>
+          <div class="pilier-icon">🤝</div>
           <h3>Camaraderie</h3>
-          <p>Unis comme une seule armée, nos soldats forment une fraternité indestructible forgée dans le feu des batailles napoléoniennes.</p>
+          <p>Le 82ème GRP est avant tout une famille. Solidarité, entraide et bonne humeur sont les piliers de notre communauté soudée.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT ===== -->
-  <section class="about-section" id="about">
+  <!-- QUI SOMMES NOUS -->
+  <section class="about-section">
     <div class="container">
       <div class="about-grid">
-        <div class="about-img-frame">
-          <img src="logo.png" alt="82ème GRP" class="about-logo">
+        <div class="about-image">
+          <div class="about-img-frame">
+            <div class="img-placeholder">⚔️<br>82ème GRP<br>En Formation</div>
+          </div>
         </div>
         <div class="about-text">
-          <span class="section-sub">Notre Identité</span>
-          <h2>Le 82ème Groupe</h2>
-          <div class="divider left">⚜</div>
-          <p>Fondé dans la tradition des grands régiments napoléoniens, le 82ème Groupe est une communauté de passionnés d'histoire militaire et de jeux de guerre historiques.</p>
-          <p>Nous reconstituons avec fidélité les tactiques, l'uniforme et l'esprit des soldats de l'Empire français, offrant une expérience immersive unique.</p>
+          <p class="section-sub">Notre identité</p>
+          <h2>Qui sommes-nous ?</h2>
+          <div class="divider left"><span>⚜️</span></div>
+          <p>Le <strong>82ème Groupe de Reconnaissance et de Projection</strong> est un régiment français sur <strong>Holdfast: Nations At War</strong>. Fondé par des passionnés d'histoire militaire napoléonienne.</p>
+          <p>Structuré en unités spécialisées — Infanterie, Voltigeurs, Artillerie et Cavalerie — le régiment offre un cadre compétitif et accueillant.</p>
           <div class="about-features">
-            <span class="feature">⚔ Batailles organisées</span>
-            <span class="feature">📜 Événements historiques</span>
-            <span class="feature">🎖 Grades & promotions</span>
-            <span class="feature">🏛 Formation tactique</span>
+            <div class="feature">✅ Linebattles hebdomadaires</div>
+            <div class="feature">✅ Entraînements réguliers</div>
+            <div class="feature">✅ Communauté francophone</div>
+            <div class="feature">✅ Hiérarchie structurée</div>
           </div>
-          <a href="#recrutement" class="btn-primary">Rejoindre les rangs</a>
+          <a href="#recrutement" class="btn-primary">Nous rejoindre</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== HISTOIRE ===== -->
-  <section class="histoire-section" id="histoire">
+  <!-- HISTOIRE -->
+  <section id="histoire" class="histoire-section">
     <div class="container">
       <div class="section-header">
-        <span class="section-sub">Notre Parcours</span>
+        <p class="section-sub">Notre parcours</p>
         <h2>Histoire du Régiment</h2>
-        <div class="divider">⚜</div>
+        <div class="divider"><span>⚜️</span></div>
       </div>
       <div class="timeline">
         <div class="timeline-item left">
-          <div class="timeline-dot">⚜</div>
+          <div class="timeline-dot">⚜️</div>
           <div class="timeline-card">
             <div class="timeline-date">Fondation</div>
-            <h3>Création du 82ème</h3>
-            <p>Le régiment est fondé par un groupe de passionnés déterminés à recréer la gloire des armées napoléoniennes.</p>
+            <h3>Création du 82ème GRP</h3>
+            <p>Le régiment est fondé par un groupe d'officiers expérimentés, déterminés à créer une unité d'élite sur Holdfast Nations At War.</p>
           </div>
         </div>
         <div class="timeline-item right">
-          <div class="timeline-dot">⚔</div>
+          <div class="timeline-dot">⚔️</div>
           <div class="timeline-card">
             <div class="timeline-date">Premières Batailles</div>
             <h3>Baptême du Feu</h3>
-            <p>Nos premiers engagements forgent l'identité du régiment et établissent notre réputation sur les champs de bataille.</p>
+            <p>Le 82ème GRP s'illustre lors de ses premières linebattles, démontrant discipline et cohésion face aux régiments adverses.</p>
           </div>
         </div>
         <div class="timeline-item left">
-          <div class="timeline-dot">🎖</div>
+          <div class="timeline-dot">🏆</div>
           <div class="timeline-card">
             <div class="timeline-date">Expansion</div>
-            <h3>Croissance des Rangs</h3>
-            <p>Le régiment s'agrandit, accueillant de nouveaux soldats et développant une hiérarchie structurée.</p>
+            <h3>Croissance du Régiment</h3>
+            <p>Les rangs grossissent, les compagnies se spécialisent. Le régiment s'impose comme une force reconnue.</p>
           </div>
         </div>
         <div class="timeline-item right">
-          <div class="timeline-dot">🏛</div>
+          <div class="timeline-dot">🎖️</div>
           <div class="timeline-card">
             <div class="timeline-date">Aujourd'hui</div>
-            <h3>La Gloire Continue</h3>
-            <p>Le 82ème Groupe continue de porter haut les couleurs de l'Empire, toujours en quête de nouveaux horizons.</p>
+            <h3>L'Héritage Continue</h3>
+            <p>Fort de ses membres passionnés, le 82ème GRP continue d'écrire son histoire et recrute de nouvelles recrues motivées.</p>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== RECRUTEMENT ===== -->
-  <section class="recrutement-section" id="recrutement">
+  <!-- RECRUTEMENT -->
+  <section id="recrutement" class="recrutement-section">
     <div class="container">
-      <div class="section-header">
-        <span class="section-sub">Rejoignez-Nous</span>
-        <h2>Recrutement</h2>
-        <div class="divider">⚜</div>
+      <div class="recrutement-content">
+        <div class="section-header">
+          <p class="section-sub">Rejoignez-nous</p>
+          <h2>Recrutement Ouvert</h2>
+          <div class="divider"><span>⚜️</span></div>
+        </div>
+        <p class="recrutement-text">Que vous soyez vétéran ou nouvelle recrue, le 82ème GRP vous accueille dans ses rangs.</p>
+        <div class="recrutement-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <p>Rejoindre le Discord</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <p>Ouvrir un ticket</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <p>Passer l'entretien</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <p>Bienvenue soldat !</p>
+          </div>
+        </div>
+        <a href="https://discord.gg/TONLIEN" class="btn-primary large" target="_blank">
+          Rejoindre le Discord
+        </a>
       </div>
-      <p class="recrutement-text">
-        Le 82ème Groupe recrute des soldats motivés et passionnés. Rejoignez nos rangs et participez à l'écriture d'une nouvelle page de gloire.
-      </p>
-      <div class="recrutement-steps">
-        <div class="step">
-          <div class="step-number">1</div>
-          <p>Rejoindre le Discord</p>
-        </div>
-        <span class="step-arrow">→</span>
-        <div class="step">
-          <div class="step-number">2</div>
-          <p>Candidature</p>
-        </div>
-        <span class="step-arrow">→</span>
-        <div class="step">
-          <div class="step-number">3</div>
-          <p>Entretien</p>
-        </div>
-        <span class="step-arrow">→</span>
-        <div class="step">
-          <div class="step-number">4</div>
-          <p>Formation</p>
-        </div>
-      </div>
-      <a href="https://discord.gg/votre-lien" class="btn-primary large" target="_blank">
-        ⚔ Rejoindre le Discord
-      </a>
     </div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="logo.png" alt="82ème GRP" class="footer-logo">
-          <h3>82ÈME GRP</h3>
-          <p>Régiment d'infanterie napoléonien. Honneur, discipline et camaraderie depuis notre fondation.</p>
-          <p class="footer-quote">"L'honneur guide nos pas, la gloire couronne nos efforts"</p>
+          <h3>82<sup>ème</sup> GRP</h3>
+          <p>Régiment français sur<br>Holdfast: Nations At War</p>
+          <p class="footer-quote">« L'honneur ne se rend pas,<br>il se conquiert. »</p>
         </div>
         <div class="footer-links">
           <h4>Navigation</h4>
           <ul>
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#histoire">Histoire</a></li>
-            <li><a href="#piliers">Valeurs</a></li>
-            <li><a href="#about">À Propos</a></li>
-            <li><a href="#recrutement">Recrutement</a></li>
+            <li><a href="#piliers">Le Régiment</a></li>
+            <li><a href="#recrutement">Rejoindre</a></li>
           </ul>
         </div>
         <div class="footer-social">
-          <h4>Nous Rejoindre</h4>
-          <a href="https://discord.gg/votre-lien" class="footer-discord" target="_blank">
-            ⚔ Discord
+          <h4>Nous rejoindre</h4>
+          <a href="https://discord.gg/TONLIEN" class="footer-discord" target="_blank">
+            Discord du Régiment
           </a>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>© 2026 82ème Groupe — Tous droits réservés</p>
+        <p>© 2026 82ème GRP — Tous droits réservés</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    // Navbar scroll
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 50);
-    });
-
-    // Menu mobile
-    document.getElementById('navToggle').addEventListener('click', () => {
-      document.getElementById('navLinks').classList.toggle('open');
-    });
-  </script>
-
+  <script src="script.js"></script>
 </body>
 </html>
