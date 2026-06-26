@@ -341,7 +341,7 @@ body {
   margin-bottom: 20px;
 }
 
-/* ✅ BUG 1 CORRIGÉ - divider::before était cassé */
+/* ✅ BUG CORRIGÉ - divider complet */
 .divider {
   display: flex;
   align-items: center;
@@ -801,6 +801,12 @@ body {
 
   .recrutement-steps { gap: 10px; }
   .step-arrow { display: none; }
+
+  /* Logo mobile */
+  .hero-logo {
+    width: 120px;
+    height: 120px;
+  }
 }
 
 @media (max-width: 480px) {
@@ -808,11 +814,10 @@ body {
   .btn-primary, .btn-secondary { width: 100%; text-align: center; }
 }
 
-/* ✅ BUG 2 CORRIGÉ - doublon supprimé, accolade fermante ajoutée */
 /* ===== LOGO HERO ===== */
 .hero-logo {
-  width: 18px;
-  height: 18px;
+  width: 70px; /* ⬅️ Modifie cette valeur pour changer la taille */
+  height: 70px;
   object-fit: contain;
   margin: 10px auto 20px auto;
   display: block;
@@ -823,21 +828,4 @@ body {
 @keyframes logoPulse {
   0%, 100% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5)); }
   50%       { filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.9)); }
-}
-
-@media (max-width: 768px) {
-  .hero-logo {
-    width: 12px;
-    height: 12px;
-  }
-}
-/* ===== LOGO HERO ===== */
-.hero-logo {
-  width: 150px; /* ⬅️ Change ce chiffre pour ajuster la taille */
-  height: 150px;
-  object-fit: contain;
-  margin: 10px auto 20px auto;
-  display: block;
-  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
-  animation: logoPulse 3s ease-in-out infinite;
 }
