@@ -831,3 +831,13 @@ body {
     height: 12px;
   }
 }
+/* ===== LOGO HERO ===== */
+.hero-logo {
+  width: 150px; /* ⬅️ Change ce chiffre pour ajuster la taille */
+  height: 150px;
+  object-fit: contain;
+  margin: 10px auto 20px auto;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+  animation: logoPulse 3s ease-in-out infinite;
+}
