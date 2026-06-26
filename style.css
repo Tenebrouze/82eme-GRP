@@ -1,6 +1,4 @@
-
-  height: 1px;
-  background: linear-grad/* ===== RESET & BASE ===== */
+/* ===== RESET & BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -343,6 +341,7 @@ body {
   margin-bottom: 20px;
 }
 
+/* ✅ BUG 1 CORRIGÉ - divider::before était cassé */
 .divider {
   display: flex;
   align-items: center;
@@ -355,7 +354,9 @@ body {
 .divider::before,
 .divider::after {
   content: '';
-  width: 80px;ient(to right, transparent, rgba(201,168,76,0.6));
+  width: 80px;
+  height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,168,76,0.6));
 }
 
 .divider::after {
@@ -710,7 +711,6 @@ body {
 }
 
 .footer-links ul { list-style: none; }
-
 .footer-links li { margin-bottom: 12px; }
 
 .footer-links a {
@@ -808,10 +808,11 @@ body {
   .btn-primary, .btn-secondary { width: 100%; text-align: center; }
 }
 
+/* ✅ BUG 2 CORRIGÉ - doublon supprimé, accolade fermante ajoutée */
 /* ===== LOGO HERO ===== */
 .hero-logo {
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   object-fit: contain;
   margin: 10px auto 20px auto;
   display: block;
@@ -823,12 +824,10 @@ body {
   0%, 100% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5)); }
   50%       { filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.9)); }
 }
-/* ===== LOGO HERO ===== */
-.hero-logo {
-  width: 180px;   /* Change cette valeur selon ce que tu veux */
-  height: 180px;
-  object-fit: contain;
-  margin: 10px auto 20px auto;
-  display: block;
-  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
-  animation: logoPulse 3s ease-in-out infinite;
+
+@media (max-width: 768px) {
+  .hero-logo {
+    width: 120px;
+    height: 120px;
+  }
+}
