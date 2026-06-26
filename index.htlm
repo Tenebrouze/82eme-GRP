@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>82ème GRP - Régiment Napoléonien</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">⚔️ 82ème GRP</div>
+            <ul class="nav-links">
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#histoire">Histoire</a></li>
+                <li><a href="#membres">Membres</a></li>
+                <li><a href="#rejoindre">Rejoindre</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="accueil" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">⚜️</div>
+            <h1 class="hero-title">82ème GRP</h1>
+            <p class="hero-subtitle">Régiment de la Grande Armée</p>
+            <p class="hero-slogan">"Charges, Salves et Fraternité"</p>
+            <div class="hero-divider">⚔️ ——————— ⚔️</div>
+            <a href="#rejoindre" class="btn-primary">Rejoindre le Régiment</a>
+        </div>
+    </section>
+
+    <!-- HISTOIRE -->
+    <section id="histoire" class="section-dark">
+        <div class="container">
+            <h2 class="section-title">⚜️ Histoire du Régiment ⚜️</h2>
+            <div class="divider-gold"></div>
+            <div class="histoire-grid">
+                <div class="histoire-card">
+                    <div class="card-icon">🎖️</div>
+                    <h3>Fondation</h3>
+                    <p>Le 82ème GRP fut fondé avec pour mission de représenter la gloire de la Grande Armée sur les champs de bataille de Holdfast.</p>
+                </div>
+                <div class="histoire-card">
+                    <div class="card-icon">⚔️</div>
+                    <h3>Batailles</h3>
+                    <p>Nombreuses victoires obtenues grâce à la discipline, la coordination et le courage sans faille de nos soldats.</p>
+                </div>
+                <div class="histoire-card">
+                    <div class="card-icon">🏆</div>
+                    <h3>Honneur</h3>
+                    <p>Le régiment incarne les valeurs militaires napoléoniennes : honneur, discipline et fraternité entre soldats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MEMBRES -->
+    <section id="membres" class="section-light">
+        <div class="container">
+            <h2 class="section-title dark">⚜️ Officiers du Régiment ⚜️</h2>
+            <div class="divider-gold"></div>
+            <div class="membres-grid">
+                <div class="membre-card">
+                    <div class="membre-rank">👑</div>
+                    <h3>Colonel</h3>
+                    <p class="membre-name">Nom du Colonel</p>
+                    <p class="membre-role">Commandant en Chef</p>
+                </div>
+                <div class="membre-card">
+                    <div class="membre-rank">⭐</div>
+                    <h3>Capitaine</h3>
+                    <p class="membre-name">Nom du Capitaine</p>
+                    <p class="membre-role">Officier Supérieur</p>
+                </div>
+                <div class="membre-card">
+                    <div class="membre-rank">🎖️</div>
+                    <h3>Lieutenant</h3>
+                    <p class="membre-name">Nom du Lieutenant</p>
+                    <p class="membre-role">Officier Subalterne</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REJOINDRE -->
+    <section id="rejoindre" class="section-dark">
+        <div class="container">
+            <h2 class="section-title">⚜️ Rejoindre le Régiment ⚜️</h2>
+            <div class="divider-gold"></div>
+            <div class="rejoindre-content">
+                <div class="conditions">
+                    <h3>📋 Conditions pour rejoindre :</h3>
+                    <ul>
+                        <li>✅ Avoir Holdfast Nations At War</li>
+                        <li>✅ Être respectueux et discipliné</li>
+                        <li>✅ Participer aux événements</li>
+                        <li>✅ Avoir un micro fonctionnel</li>
+                        <li>✅ Avoir Discord</li>
+                    </ul>
+                </div>
+                <div class="discord-box">
+                    <h3>🎮 Nous rejoindre sur Discord</h3>
+                    <p>Rejoins notre serveur Discord pour débuter ton recrutement !</p>
+                    <a href="LIEN_DISCORD_ICI" class="btn-discord">Rejoindre le Discord</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-logo">⚔️ 82ème GRP ⚔️</p>
+            <p class="footer-slogan">"Charges, Salves et Fraternité"</p>
+            <div class="divider-gold"></div>
+            <p class="footer-copy">© 2026 82ème GRP - Tous droits réservés</p>
+        </div>
+    </footer>
+
+</body>
+</html>
