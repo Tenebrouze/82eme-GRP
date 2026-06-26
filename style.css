@@ -1,25 +1,22 @@
-/* ===== RESET & BASE ===== */
+:root {
+    --navy: #0d1b2a;
+    --navy-light: #152338;
+    --or: #c9a84c;
+    --or-light: #e2c97e;
+    --blanc: #f0e6d3;
+    --rouge: #c0392b;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-:root {
-    --or: #d4af37;
-    --or-fonce: #c9a84c;
-    --noir: #0a0a0a;
-    --bleu-nuit: #0d1b2a;
-    --rouge: #8b0000;
-    --blanc-casse: #f0e6d3;
-    --gris-fonce: #1a1a2e;
-}
-
 body {
+    background: var(--navy);
+    color: var(--blanc);
     font-family: 'Libre Baskerville', serif;
-    background-color: var(--noir);
-    color: var(--blanc-casse);
-    overflow-x: hidden;
 }
 
 /* ===== NAVBAR ===== */
@@ -27,41 +24,70 @@ body {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 10, 0.95);
-    border-bottom: 2px solid var(--or);
+    background: rgba(10, 20, 35, 0.97);
+    border-bottom: 1px solid rgba(201, 168, 76, 0.3);
     z-index: 1000;
-    padding: 15px 0;
+    padding: 12px 0;
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 30px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-name {
     font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.logo-grp {
     color: var(--or);
-    font-weight: 700;
+}
+
+.logo-sub {
+    font-family: 'Cinzel', serif;
+    font-size: 0.55rem;
+    color: var(--or);
+    letter-spacing: 3px;
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 30px;
 }
 
 .nav-links a {
     font-family: 'Cinzel', serif;
-    color: var(--blanc-casse);
+    font-size: 0.75rem;
+    color: rgba(240, 230, 211, 0.85);
     text-decoration: none;
-    font-size: 0.9rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
+    letter-spacing: 1.5px;
     transition: color 0.3s;
 }
 
@@ -69,333 +95,251 @@ body {
     color: var(--or);
 }
 
+.btn-discord {
+    font-family: 'Cinzel', serif;
+    background: var(--or);
+    color: #0d1b2a;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    transition: all 0.3s;
+    white-space: nowrap;
+}
+
+.btn-discord:hover {
+    background: var(--or-light);
+}
+
 /* ===== HERO ===== */
 .hero {
+    position: relative;
     height: 100vh;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a0a0a 50%, #0d1b2a 100%);
+    min-height: 500px;
+    background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+                url('hero.jpg') center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    position: relative;
-}
-
-.hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.05) 0%, transparent 70%);
 }
 
 .hero-content {
-    position: relative;
+    text-align: center;
+    padding: 0 20px;
     z-index: 1;
-    padding: 20px;
-}
-
-.hero-badge {
-    font-size: 4rem;
-    margin-bottom: 20px;
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.1); }
 }
 
 .hero-title {
     font-family: 'Cinzel', serif;
-    font-size: 5rem;
+    font-size: clamp(2rem, 5vw, 4.5rem);
     font-weight: 900;
-    color: var(--or);
-    text-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
-    letter-spacing: 10px;
-    margin-bottom: 15px;
-}
-
-.hero-subtitle {
-    font-family: 'Cinzel', serif;
-    font-size: 1.5rem;
-    color: var(--blanc-casse);
-    letter-spacing: 5px;
-    margin-bottom: 20px;
-}
-
-.hero-slogan {
-    font-family: 'Libre Baskerville', serif;
-    font-style: italic;
-    font-size: 1.2rem;
-    color: var(--or-fonce);
-    margin-bottom: 30px;
-}
-
-.hero-divider {
-    font-size: 1.2rem;
-    color: var(--or);
-    margin-bottom: 40px;
-    letter-spacing: 5px;
-}
-
-.btn-primary {
-    font-family: 'Cinzel', serif;
-    background: linear-gradient(135deg, var(--or), var(--or-fonce));
-    color: var(--noir);
-    padding: 15px 40px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
+    color: white;
+    line-height: 1.2;
     letter-spacing: 3px;
-    text-transform: uppercase;
-    border: 2px solid var(--or);
-    transition: all 0.3s;
-    display: inline-block;
+    text-shadow: 2px 2px 20px rgba(0,0,0,0.8);
 }
 
-.btn-primary:hover {
-    background: transparent;
+.hero-gold {
     color: var(--or);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.hero-quote {
+    margin-top: 20px;
+    font-style: italic;
+    color: rgba(240, 230, 211, 0.8);
+    font-size: 1rem;
 }
 
 /* ===== SECTIONS ===== */
-.section-dark {
-    background: var(--bleu-nuit);
-    padding: 80px 0;
-}
-
-.section-light {
-    background: var(--gris-fonce);
-    padding: 80px 0;
+.section-structure {
+    background: var(--navy);
+    padding: 100px 20px;
+    text-align: center;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+}
+
+.section-label {
+    font-family: 'Cinzel', serif;
+    color: var(--or);
+    font-size: 0.75rem;
+    letter-spacing: 6px;
+    margin-bottom: 15px;
 }
 
 .section-title {
     font-family: 'Cinzel', serif;
-    font-size: 2.5rem;
-    color: var(--or);
-    text-align: center;
-    letter-spacing: 5px;
-    margin-bottom: 20px;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: 900;
+    color: white;
+    letter-spacing: 4px;
 }
 
-.section-title.dark {
-    color: var(--or);
-}
-
-.divider-gold {
-    width: 200px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--or), transparent);
-    margin: 0 auto 60px;
-}
-
-/* ===== HISTOIRE CARDS ===== */
-.histoire-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-}
-
-.histoire-card {
-    background: rgba(212, 175, 55, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 40px 30px;
-    text-align: center;
-    transition: all 0.3s;
-}
-
-.histoire-card:hover {
-    border-color: var(--or);
-    background: rgba(212, 175, 55, 0.1);
-    transform: translateY(-5px);
-}
-
-.card-icon {
-    font-size: 3rem;
-    margin-bottom: 20px;
-}
-
-.histoire-card h3 {
-    font-family: 'Cinzel', serif;
-    color: var(--or);
-    font-size: 1.3rem;
-    margin-bottom: 15px;
-    letter-spacing: 3px;
-}
-
-.histoire-card p {
-    color: var(--blanc-casse);
-    line-height: 1.8;
-    opacity: 0.85;
-}
-
-/* ===== MEMBRES ===== */
-.membres-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-}
-
-.membre-card {
-    background: rgba(10, 10, 10, 0.8);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 40px 20px;
-    text-align: center;
-    transition: all 0.3s;
-}
-
-.membre-card:hover {
-    border-color: var(--or);
-    transform: translateY(-5px);
-}
-
-.membre-rank {
-    font-size: 3rem;
-    margin-bottom: 15px;
-}
-
-.membre-card h3 {
-    font-family: 'Cinzel', serif;
+.title-divider {
     color: var(--or);
     font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.section-desc {
+    max-width: 600px;
+    margin: 0 auto 50px;
+    line-height: 1.9;
+    color: rgba(240, 230, 211, 0.75);
+    font-size: 1rem;
+}
+
+/* ===== COMMANDEMENT ===== */
+.commandement {
+    border: 1px solid var(--or);
+    padding: 25px 50px;
+    display: inline-block;
+    margin-bottom: 0;
+}
+
+.cmd-title {
+    font-family: 'Cinzel', serif;
+    color: var(--or);
+    font-size: 1rem;
+    letter-spacing: 4px;
+    font-weight: 700;
+}
+
+.cmd-sub {
+    font-family: 'Cinzel', serif;
+    color: rgba(240, 230, 211, 0.6);
+    font-size: 0.7rem;
+    letter-spacing: 3px;
+    margin-top: 5px;
+}
+
+.corps-line {
+    width: 1px;
+    height: 50px;
+    background: var(--or);
+    margin: 0 auto;
+}
+
+/* ===== CORPS GRID ===== */
+.corps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    margin-top: 0;
+}
+
+.corps-card {
+    padding: 40px 30px;
+    text-align: center;
+    border: 1px solid rgba(201, 168, 76, 0.15);
+}
+
+.corps-blue {
+    background: rgba(30, 60, 100, 0.4);
+    border-top: 3px solid rgba(201, 168, 76, 0.4);
+}
+
+.corps-red {
+    background: rgba(80, 20, 20, 0.4);
+    border-top: 3px solid var(--rouge);
+}
+
+.corps-label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.7rem;
+    color: var(--or);
     letter-spacing: 3px;
     margin-bottom: 10px;
 }
 
-.membre-name {
-    color: var(--blanc-casse);
-    font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 5px;
+.corps-red-label {
+    color: var(--rouge);
 }
 
-.membre-role {
-    color: var(--or-fonce);
-    font-style: italic;
-    font-size: 0.9rem;
-}
-
-/* ===== REJOINDRE ===== */
-.rejoindre-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 20px;
-}
-
-.conditions {
-    background: rgba(212, 175, 55, 0.05);
-    border: 1px solid rgba(212, 175, 55, 0.3);
-    padding: 40px;
-}
-
-.conditions h3 {
+.corps-card h3 {
     font-family: 'Cinzel', serif;
-    color: var(--or);
-    font-size: 1.3rem;
-    margin-bottom: 25px;
-    letter-spacing: 2px;
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: white;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
 }
 
-.conditions ul {
-    list-style: none;
-}
-
-.conditions li {
-    padding: 10px 0;
-    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
-    font-size: 1rem;
+.corps-quote {
+    font-style: italic;
+    color: rgba(240, 230, 211, 0.6);
+    font-size: 0.85rem;
     line-height: 1.6;
 }
 
-.discord-box {
-    background: rgba(88, 101, 242, 0.1);
-    border: 1px solid rgba(88, 101, 242, 0.4);
-    padding: 40px;
+/* ===== REJOINDRE ===== */
+.section-rejoindre {
+    background: var(--navy-light);
+    padding: 100px 20px;
     text-align: center;
+    border-top: 1px solid rgba(201, 168, 76, 0.2);
 }
 
-.discord-box h3 {
-    font-family: 'Cinzel', serif;
-    color: var(--or);
-    font-size: 1.3rem;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
-
-.discord-box p {
-    margin-bottom: 30px;
-    line-height: 1.8;
-    opacity: 0.85;
-}
-
-.btn-discord {
-    font-family: 'Cinzel', serif;
-    background: #5865F2;
-    color: white;
-    padding: 15px 40px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 1rem;
-    letter-spacing: 2px;
+.btn-rejoindre {
     display: inline-block;
+    margin-top: 30px;
+    font-family: 'Cinzel', serif;
+    background: transparent;
+    border: 2px solid var(--or);
+    color: var(--or);
+    padding: 18px 50px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 700;
+    letter-spacing: 4px;
     transition: all 0.3s;
 }
 
-.btn-discord:hover {
-    background: #4752c4;
-    transform: translateY(-3px);
-    box-shadow: 0 10px 30px rgba(88, 101, 242, 0.4);
+.btn-rejoindre:hover {
+    background: var(--or);
+    color: var(--navy);
 }
 
 /* ===== FOOTER ===== */
 .footer {
-    background: #050505;
-    border-top: 2px solid var(--or);
-    padding: 40px 0;
+    background: #050d18;
+    border-top: 2px solid rgba(201, 168, 76, 0.3);
+    padding: 50px 20px;
     text-align: center;
 }
 
 .footer-logo {
     font-family: 'Cinzel', serif;
-    font-size: 1.8rem;
-    color: var(--or);
-    margin-bottom: 10px;
+    font-size: 2rem;
+    font-weight: 900;
+    color: white;
     letter-spacing: 5px;
 }
 
-.footer-slogan {
-    font-style: italic;
-    color: var(--or-fonce);
-    margin-bottom: 20px;
+.footer-logo span {
+    color: var(--or);
+}
+
+.footer-sub {
+    font-family: 'Cinzel', serif;
+    font-size: 0.6rem;
+    color: var(--or);
+    letter-spacing: 5px;
+    margin-top: 5px;
 }
 
 .footer-copy {
-    color: rgba(240, 230, 211, 0.4);
-    font-size: 0.85rem;
     margin-top: 20px;
+    color: rgba(240, 230, 211, 0.3);
+    font-size: 0.8rem;
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 3rem;
-    }
-    
-    .nav-links {
-        display: none;
-    }
-    
-    .section-title {
-        font-size: 1.8rem;
-    }
+@media (max-width: 900px) {
+    .nav-links { display: none; }
+    .corps-grid { grid-template-columns: 1fr; }
 }
