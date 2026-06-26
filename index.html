@@ -3,124 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>82ème GRP - Régiment Napoléonien</title>
+    <title>82ème GRP - Grenadiers à Pied</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- NAVIGATION -->
+    <!-- NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="nav-logo">⚔️ 82ème GRP</div>
+            <div class="nav-logo">
+                <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">
+                <div class="logo-text">
+                    <span class="logo-name">82<span class="logo-grp">GRP</span></span>
+                    <span class="logo-sub">GRENADIERS À PIED</span>
+                </div>
+            </div>
             <ul class="nav-links">
-                <li><a href="#accueil">Accueil</a></li>
-                <li><a href="#histoire">Histoire</a></li>
-                <li><a href="#membres">Membres</a></li>
-                <li><a href="#rejoindre">Rejoindre</a></li>
+                <li><a href="#regiment">LE RÉGIMENT</a></li>
+                <li><a href="#compagnies">COMPAGNIES</a></li>
+                <li><a href="#trailer">TRAILER</a></li>
+                <li><a href="#calendrier">CALENDRIER</a></li>
+                <li><a href="#galerie">GALERIE</a></li>
+                <li><a href="#rejoindre">REJOINDRE</a></li>
             </ul>
+            <a href="#" class="btn-discord">🎮 DISCORD</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="accueil" class="hero">
+    <!-- HERO -->
+    <section class="hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-badge">⚜️</div>
-            <h1 class="hero-title">82ème GRP</h1>
-            <p class="hero-subtitle">Régiment de la Grande Armée</p>
-            <p class="hero-slogan">"Charges, Salves et Fraternité"</p>
-            <div class="hero-divider">⚔️ ——————— ⚔️</div>
-            <a href="#rejoindre" class="btn-primary">Rejoindre le Régiment</a>
+            <h1 class="hero-title">UN GRENADIER DEBOUT,<br><span class="hero-gold">LA LIGNE TIENDRA. »</span></h1>
+            <p class="hero-quote">— Esprit du 82<sup>ème</sup> Régiment de Grenadiers à Pied</p>
         </div>
     </section>
 
-    <!-- HISTOIRE -->
-    <section id="histoire" class="section-dark">
+    <!-- STRUCTURE -->
+    <section id="compagnies" class="section-structure">
         <div class="container">
-            <h2 class="section-title">⚜️ Histoire du Régiment ⚜️</h2>
-            <div class="divider-gold"></div>
-            <div class="histoire-grid">
-                <div class="histoire-card">
-                    <div class="card-icon">🎖️</div>
-                    <h3>Fondation</h3>
-                    <p>Le 82ème GRP fut fondé avec pour mission de représenter la gloire de la Grande Armée sur les champs de bataille de Holdfast.</p>
-                </div>
-                <div class="histoire-card">
-                    <div class="card-icon">⚔️</div>
-                    <h3>Batailles</h3>
-                    <p>Nombreuses victoires obtenues grâce à la discipline, la coordination et le courage sans faille de nos soldats.</p>
-                </div>
-                <div class="histoire-card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Honneur</h3>
-                    <p>Le régiment incarne les valeurs militaires napoléoniennes : honneur, discipline et fraternité entre soldats.</p>
-                </div>
+            <p class="section-label">ORDRE DE BATAILLE</p>
+            <h2 class="section-title">STRUCTURE DU RÉGIMENT</h2>
+            <div class="title-divider">◆</div>
+            <p class="section-desc">Trois Corps, six unités, un seul drapeau. Chacun y trouve sa place selon son style de jeu.</p>
+
+            <div class="commandement">
+                <p class="cmd-title">COMMANDEMENT GÉNÉRAL</p>
+                <p class="cmd-sub">ÉTAT-MAJOR DU 82GRP</p>
             </div>
-        </div>
-    </section>
+            <div class="corps-line"></div>
 
-    <!-- MEMBRES -->
-    <section id="membres" class="section-light">
-        <div class="container">
-            <h2 class="section-title dark">⚜️ Officiers du Régiment ⚜️</h2>
-            <div class="divider-gold"></div>
-            <div class="membres-grid">
-                <div class="membre-card">
-                    <div class="membre-rank">👑</div>
-                    <h3>Colonel</h3>
-                    <p class="membre-name">Nom du Colonel</p>
-                    <p class="membre-role">Commandant en Chef</p>
+            <div class="corps-grid">
+                <div class="corps-card corps-blue">
+                    <p class="corps-label">IER C.</p>
+                    <h3>1<sup>ER</sup> CORPS</h3>
+                    <p class="corps-quote">« Du tonnerre naît la Victoire ! »</p>
                 </div>
-                <div class="membre-card">
-                    <div class="membre-rank">⭐</div>
-                    <h3>Capitaine</h3>
-                    <p class="membre-name">Nom du Capitaine</p>
-                    <p class="membre-role">Officier Supérieur</p>
+                <div class="corps-card corps-blue">
+                    <p class="corps-label">IIE C.</p>
+                    <h3>2<sup>ÈME</sup> CORPS</h3>
+                    <p class="corps-quote">« Là où nous passions, le silence suit ! »</p>
                 </div>
-                <div class="membre-card">
-                    <div class="membre-rank">🎖️</div>
-                    <h3>Lieutenant</h3>
-                    <p class="membre-name">Nom du Lieutenant</p>
-                    <p class="membre-role">Officier Subalterne</p>
+                <div class="corps-card corps-red">
+                    <p class="corps-label corps-red-label">IIIE C.</p>
+                    <h3>3<sup>ÈME</sup> CORPS</h3>
+                    <p class="corps-quote">« La Garde meurt mais ne se rend pas ! »</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- REJOINDRE -->
-    <section id="rejoindre" class="section-dark">
+    <section id="rejoindre" class="section-rejoindre">
         <div class="container">
-            <h2 class="section-title">⚜️ Rejoindre le Régiment ⚜️</h2>
-            <div class="divider-gold"></div>
-            <div class="rejoindre-content">
-                <div class="conditions">
-                    <h3>📋 Conditions pour rejoindre :</h3>
-                    <ul>
-                        <li>✅ Avoir Holdfast Nations At War</li>
-                        <li>✅ Être respectueux et discipliné</li>
-                        <li>✅ Participer aux événements</li>
-                        <li>✅ Avoir un micro fonctionnel</li>
-                        <li>✅ Avoir Discord</li>
-                    </ul>
-                </div>
-                <div class="discord-box">
-                    <h3>🎮 Nous rejoindre sur Discord</h3>
-                    <p>Rejoins notre serveur Discord pour débuter ton recrutement !</p>
-                    <a href="LIEN_DISCORD_ICI" class="btn-discord">Rejoindre le Discord</a>
-                </div>
-            </div>
+            <p class="section-label">RECRUTEMENT</p>
+            <h2 class="section-title">REJOINDRE LE RÉGIMENT</h2>
+            <div class="title-divider">◆</div>
+            <p class="section-desc">Tu veux porter les couleurs du 82ème GRP sur les champs de bataille ? Rejoins-nous sur Discord.</p>
+            <a href="#" class="btn-rejoindre">REJOINDRE LE DISCORD</a>
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-        <div class="container">
-            <p class="footer-logo">⚔️ 82ème GRP ⚔️</p>
-            <p class="footer-slogan">"Charges, Salves et Fraternité"</p>
-            <div class="divider-gold"></div>
-            <p class="footer-copy">© 2026 82ème GRP - Tous droits réservés</p>
-        </div>
+        <div class="footer-logo">82<span>GRP</span></div>
+        <p class="footer-sub">GRENADIERS À PIED</p>
+        <p class="footer-copy">© 2026 82ème GRP — Tous droits réservés</p>
     </footer>
 
 </body>
