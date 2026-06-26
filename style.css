@@ -823,3 +823,12 @@ body {
   0%, 100% { filter: drop-shadow(0 0 15px rgba(212, 175, 55, 0.5)); }
   50%       { filter: drop-shadow(0 0 35px rgba(212, 175, 55, 0.9)); }
 }
+/* ===== LOGO HERO ===== */
+.hero-logo {
+  width: 180px;   /* Change cette valeur selon ce que tu veux */
+  height: 180px;
+  object-fit: contain;
+  margin: 10px auto 20px auto;
+  display: block;
+  filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.6));
+  animation: logoPulse 3s ease-in-out infinite;
