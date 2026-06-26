@@ -1,1 +1,1 @@
-# 82eme-GRP
+# 82eme Regiment de Grenadier à Pied
