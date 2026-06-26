@@ -50,3 +50,37 @@ revealElements.forEach(el => observer.observe(el));
 document.querySelector('.hero-scroll')?.addEventListener('click', () => {
   document.getElementById('piliers').scrollIntoView({ behavior: 'smooth' });
 });
+
+// ===== DISCORD STATS =====
+const GUILD_ID = '1177933822923387041';
+
+async function fetchDiscordStats() {
+  try {
+    const response = await fetch(`https://discord.com/api/v10/guilds/${GUILD_ID}/widget.json`);
+    
+    if (!response.ok) {
+      throw new Error(`Erreur API: ${response.status}`);
+    }
+    
+    const data = await response.json();
+
+    if (data.members && data.channels) {
+      const totalMembers = data.members.length;
+      document.getElementById('member-count').textContent = totalMembers;
+      
+      const onlineCount = data.members.filter(m => m.status !== 'offline').length;
+      document.getElementById('online-count').textContent = onlineCount;
+      
+      const channelCount = data.channels.length;
+      document.getElementById('channel-count').textContent = channelCount;
+      
+      console.log(`✅ Stats Discord mises à jour: ${totalMembers} membres, ${onlineCount} en ligne`);
+    }
+  } catch (error) {
+    console.error('❌ Erreur:', error);
+  }
+}
+
+document.addEventListener('DOMContentLoaded', fetchDiscordStats);
+setInterval(fetchDiscordStats, 30000);
+
