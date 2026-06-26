@@ -232,3 +232,149 @@
     margin-right: 0 !important;
   }
 }
+/* ===== TRAILER ===== */
+.trailer-section {
+  position: relative;
+  padding: 120px 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6,13,26,1) 0%,
+    rgba(10,22,45,0.98) 50%,
+    rgba(6,13,26,1) 100%
+  );
+  overflow: hidden;
+}
+
+.trailer-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(201,168,76,0.05) 0%,
+    transparent 65%
+  );
+  pointer-events: none;
+}
+
+/* WRAPPER */
+.trailer-wrapper {
+  position: relative;
+  max-width: 850px;
+  margin: 0 auto 50px;
+}
+
+/* CADRE VIDEO */
+.trailer-frame {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 */
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(201,168,76,0.3);
+  box-shadow:
+    0 0 60px rgba(0,0,0,0.7),
+    0 0 30px rgba(201,168,76,0.08),
+    inset 0 0 30px rgba(0,0,0,0.5);
+}
+
+.trailer-frame::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 10px;
+  border: 2px solid rgba(201,168,76,0.15);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.trailer-frame iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 10px;
+}
+
+/* DECORATIONS LATERALES */
+.trailer-deco {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2rem;
+  color: var(--gold);
+  opacity: 0.25;
+  pointer-events: none;
+  text-shadow: 0 0 15px rgba(201,168,76,0.5);
+}
+
+.trailer-deco-left  { left: -50px; }
+.trailer-deco-right { right: -50px; }
+
+/* INFOS CARDS */
+.trailer-info {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.trailer-info-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(13,31,60,0.7),
+    rgba(10,22,40,0.8)
+  );
+  border: 1px solid rgba(201,168,76,0.15);
+  border-radius: 30px;
+  padding: 12px 24px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.trailer-info-card:hover {
+  border-color: rgba(201,168,76,0.4);
+  background: linear-gradient(
+    135deg,
+    rgba(201,168,76,0.08),
+    rgba(13,31,60,0.8)
+  );
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+}
+
+.info-icon {
+  font-size: 1.2rem;
+}
+
+.info-text {
+  font-family: 'Cinzel', serif;
+  font-size: 0.78rem;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .trailer-deco { display: none; }
+
+  .trailer-info {
+    gap: 12px;
+  }
+
+  .trailer-info-card {
+    padding: 10px 18px;
+  }
+
+  .info-text {
+    font-size: 0.70rem;
+  }
+}
