@@ -1,4 +1,6 @@
-/* ===== RESET & BASE ===== */
+
+  height: 1px;
+  background: linear-grad/* ===== RESET & BASE ===== */
 * {
   margin: 0;
   padding: 0;
@@ -353,9 +355,7 @@ body {
 .divider::before,
 .divider::after {
   content: '';
-  width: 80px;
-  height: 1px;
-  background: linear-gradient(to right, transparent, rgba(201,168,76,0.6));
+  width: 80px;ient(to right, transparent, rgba(201,168,76,0.6));
 }
 
 .divider::after {
