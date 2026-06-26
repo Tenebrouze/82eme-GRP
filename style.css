@@ -2214,3 +2214,8 @@ footer::before {
   }
 }
 
+.superscript {
+  font-size: 0.7em;
+  vertical-align: super;
+  line-height: 1;
+}
