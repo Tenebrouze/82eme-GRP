@@ -3,146 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>82ème GRP - Grenadiers à Pied</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
+  <title>82ème GRP - Grande Régiment Protecteur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
-    /* ===== VARIABLES ===== */
-    :root {
-      --bleu-fonce: #0a1929;
-      --bleu-marine: #1a3a52;
-      --bleu-ciel: #002395;
-      --or: #d4af37;
-      --blanc: #f5f5f5;
-      --rouge: #c41e3a;
-      --transition: all 0.4s ease;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: 'Lora', serif;
-      background-color: var(--bleu-fonce);
-      color: var(--blanc);
-      line-height: 1.6;
+      font-family: 'Poppins', sans-serif;
+      background-color: #000;
+      color: #fff;
+      overflow-x: hidden;
     }
 
     /* ===== NAVBAR ===== */
     .navbar {
-      position: fixed;
+      display: flex;
+      align-items: center;
+      height: 60px;
+      position: sticky;
       top: 0;
-      width: 100%;
-      background-color: var(--bleu-marine);
-      padding: 20px 50px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       z-index: 1000;
-      border-bottom: 2px solid var(--or);
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
-    .navbar-logo {
+    .navbar-left {
+      background: linear-gradient(90deg, #002395 0%, #002395 40%, #fff 40%, #fff 60%, #c41e3a 60%, #c41e3a 100%);
+      width: 35%;
+      height: 100%;
       display: flex;
       align-items: center;
-      gap: 15px;
-      text-decoration: none;
-      color: var(--blanc);
-    }
-
-    .navbar-logo img {
-      height: 50px;
-      width: auto;
-    }
-
-    .logo-text h1 {
-      font-family: 'Cinzel', serif;
-      font-size: 24px;
-      font-weight: 800;
-      color: var(--or);
-      letter-spacing: 2px;
-    }
-
-    .logo-text p {
-      font-size: 11px;
-      color: var(--blanc);
-      letter-spacing: 3px;
-      opacity: 0.8;
-    }
-
-    .nav-links {
-      display: flex;
-      list-style: none;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .nav-links a {
-      font-family: 'Cinzel', serif;
-      color: var(--blanc);
-      text-decoration: none;
-      font-size: 13px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      transition: var(--transition);
-      position: relative;
-      padding: 8px 0;
-    }
-
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
-      height: 2px;
-      background: linear-gradient(90deg, var(--or), var(--rouge));
-      transition: var(--transition);
-    }
-
-    .nav-links a:hover::after {
-      width: 100%;
-    }
-
-    .nav-links a:hover {
-      color: var(--or);
-    }
-
-    .discord-btn {
-      background-color: var(--or);
-      color: var(--bleu-fonce);
-      padding: 10px 25px;
-      border-radius: 5px;
+      padding-left: 30px;
+      font-size: 16px;
       font-weight: 700;
-      transition: var(--transition);
-      text-decoration: none;
-      font-family: 'Cinzel', serif;
-      font-size: 12px;
+      color: #000;
       letter-spacing: 1px;
     }
 
-    .discord-btn:hover {
-      background-color: var(--blanc);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(212, 175, 55, 0.4);
+    .navbar-center {
+      width: 45%;
+      display: flex;
+      justify-content: center;
+      gap: 35px;
+      background-color: #fff;
+      height: 100%;
+      align-items: center;
+    }
+
+    .navbar-center a {
+      text-decoration: none;
+      color: #000;
+      font-size: 13px;
+      font-weight: 500;
+      transition: 0.3s ease;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .navbar-center a:hover {
+      color: #c41e3a;
+      font-weight: 600;
+    }
+
+    .navbar-right {
+      width: 20%;
+      background-color: #c41e3a;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      text-transform: uppercase;
+      font-size: 13px;
+      letter-spacing: 1px;
+    }
+
+    .navbar-right:hover {
+      background-color: #a01630;
+      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
     }
 
     /* ===== HERO SECTION ===== */
     .hero {
-      margin-top: 80px;
-      height: 600px;
-      background: linear-gradient(135deg, rgba(10, 25, 41, 0.7), rgba(26, 58, 82, 0.7)), 
-                  url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 1200 600%22%3E%3Crect fill=%22%231a3a52%22 width=%221200%22 height=%22600%22/%3E%3Crect fill=%22%23002395%22 width=%22400%22 height=%22600%22/%3E%3Crect fill=%22%23c41e3a%22 x=%22800%22 width=%22400%22 height=%22600%22/%3E%3C/svg%3E');
-      background-attachment: fixed;
+      background: linear-gradient(90deg, 
+        #002395 0%, 
+        #002395 25%, 
+        transparent 25%, 
+        transparent 50%,
+        transparent 50%,
+        transparent 75%,
+        #c41e3a 75%, 
+        #c41e3a 100%);
+      min-height: 600px;
       display: flex;
-      flex-direction: column;
-      justify-content: center;
       align-items: center;
+      justify-content: center;
       text-align: center;
+      padding: 80px 20px;
       position: relative;
       overflow: hidden;
     }
@@ -154,268 +119,253 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: linear-gradient(180deg, transparent, rgba(10, 25, 41, 0.5));
+      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: 
+        repeating-linear-gradient(
+          90deg,
+          transparent,
+          transparent 2px,
+          rgba(255,255,255,0.02) 2px,
+          rgba(255,255,255,0.02) 4px
+        );
+      pointer-events: none;
     }
 
     .hero-content {
       position: relative;
       z-index: 2;
       max-width: 900px;
-      padding: 0 40px;
+      animation: fadeInUp 1s ease;
     }
 
-    .hero-title {
-      font-family: 'Cinzel', serif;
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero h2 {
       font-size: 28px;
+      font-weight: 400;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+      opacity: 0.9;
+    }
+
+    .hero h1 {
+      font-size: 80px;
+      font-weight: 800;
+      margin-bottom: 20px;
       letter-spacing: 3px;
-      color: var(--or);
-      margin-bottom: 20px;
-      text-transform: uppercase;
+      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
     }
 
-    .hero-main {
-      font-family: 'Cinzel', serif;
-      font-size: 56px;
-      font-weight: 900;
-      color: var(--blanc);
-      line-height: 1.2;
+    .hero h3 {
+      font-size: 22px;
+      font-weight: 500;
       margin-bottom: 20px;
-      text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.8);
       letter-spacing: 2px;
-    }
-
-    .hero-main .or {
-      color: var(--or);
-    }
-
-    .hero-quote {
-      font-family: 'Lora', serif;
-      font-size: 18px;
-      font-style: italic;
-      color: var(--blanc);
-      margin-top: 30px;
       opacity: 0.95;
     }
 
-    .hero-credit {
+    .hero p {
+      font-size: 15px;
+      font-style: italic;
+      margin-bottom: 50px;
+      opacity: 0.85;
+      letter-spacing: 0.5px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 16px 45px;
+      border: 2px solid #fff;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      background-color: transparent;
+      border-radius: 4px;
       font-size: 13px;
-      color: var(--or);
-      margin-top: 20px;
+      text-transform: uppercase;
       letter-spacing: 1px;
     }
 
-    /* ===== SECTION STRUCTURE ===== */
-    .structure-section {
-      padding: 100px 50px;
-      background: linear-gradient(135deg, rgba(26, 58, 82, 0.3), rgba(10, 25, 41, 0.3));
-      border-top: 3px solid var(--or);
+    .btn:hover {
+      background-color: #c41e3a;
+      border-color: #c41e3a;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
     }
 
-    .section-header {
+    /* ===== SECTION PILIERS ===== */
+    .piliers-section {
+      background-color: #000;
+      padding: 100px 20px;
       text-align: center;
-      margin-bottom: 80px;
     }
 
-    .section-label {
-      font-family: 'Cinzel', serif;
-      font-size: 13px;
-      letter-spacing: 4px;
-      color: var(--or);
-      text-transform: uppercase;
+    .piliers-title {
+      font-size: 54px;
+      font-weight: 800;
       margin-bottom: 20px;
+      letter-spacing: 2px;
     }
 
-    .section-title {
-      font-family: 'Cinzel', serif;
-      font-size: 48px;
-      font-weight: 900;
-      color: var(--blanc);
-      letter-spacing: 3px;
-      margin-bottom: 20px;
-      position: relative;
-      display: inline-block;
+    .piliers-underline {
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, #002395 0%, #002395 33%, #c41e3a 33%, #c41e3a 66%, #fff 66%, #fff 100%);
+      margin: 0 auto 50px;
     }
 
-    .section-title::before,
-    .section-title::after {
-      content: '';
-      position: absolute;
-      bottom: -15px;
-      width: 80px;
-      height: 2px;
-      background: linear-gradient(90deg, var(--or), var(--rouge));
-    }
-
-    .section-title::before {
-      right: 110px;
-    }
-
-    .section-title::after {
-      left: 110px;
-    }
-
-    .section-subtitle {
+    .piliers-subtitle {
       font-size: 15px;
       color: #aaa;
-      margin-top: 40px;
-      letter-spacing: 1px;
+      margin-bottom: 80px;
+      letter-spacing: 0.5px;
     }
 
-    /* ===== COMMANDEMENT ===== */
-    .commandement-box {
-      border: 2px solid var(--or);
-      padding: 40px;
-      max-width: 500px;
-      margin: 60px auto;
-      text-align: center;
-      position: relative;
-    }
-
-    .commandement-box::before {
-      content: '';
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 30px;
-      background-color: var(--bleu-fonce);
-      border: 2px solid var(--or);
-      border-radius: 50%;
-    }
-
-    .commandement-box h3 {
-      font-family: 'Cinzel', serif;
-      font-size: 20px;
-      letter-spacing: 3px;
-      color: var(--or);
-      margin-bottom: 10px;
-    }
-
-    .commandement-box p {
-      font-size: 13px;
-      color: #aaa;
-      letter-spacing: 1px;
-    }
-
-    /* ===== CORPS GRID ===== */
-    .corps-container {
+    .piliers-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 40px;
-      margin-top: 60px;
-      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .corps-container::before {
+    .pilier-card {
+      border: 2px solid #222;
+      padding: 50px 35px;
+      background: linear-gradient(135deg, rgba(0, 35, 149, 0.1) 0%, rgba(196, 30, 58, 0.05) 100%);
+      border-radius: 8px;
+      transition: all 0.4s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pilier-card::before {
       content: '';
       position: absolute;
-      top: -60px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      height: 60px;
-      background: linear-gradient(180deg, var(--or), transparent);
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #002395 0%, #c41e3a 100%);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform 0.4s ease;
     }
 
-    .corps-card {
-      border: 2px solid;
-      padding: 50px 30px 30px;
-      text-align: center;
-      position: relative;
-      transition: var(--transition);
-      background: linear-gradient(135deg, rgba(0, 35, 149, 0.1), rgba(26, 58, 82, 0.1));
+    .pilier-card:hover::before {
+      transform: scaleX(1);
     }
 
-    .corps-card:nth-child(1) {
-      border-color: var(--bleu-ciel);
-      border-left: 4px solid var(--bleu-ciel);
+    .pilier-card:hover {
+      border-color: #c41e3a;
+      transform: translateY(-8px);
+      background: linear-gradient(135deg, rgba(0, 35, 149, 0.2) 0%, rgba(196, 30, 58, 0.15) 100%);
     }
 
-    .corps-card:nth-child(2) {
-      border-color: var(--blanc);
+    .pilier-icon {
+      font-size: 56px;
+      margin-bottom: 25px;
+      display: inline-block;
+      transition: transform 0.3s ease;
     }
 
-    .corps-card:nth-child(3) {
-      border-color: var(--rouge);
-      border-right: 4px solid var(--rouge);
+    .pilier-card:hover .pilier-icon {
+      transform: scale(1.1) rotate(-5deg);
     }
 
-    .corps-card::before {
-      content: '';
-      position: absolute;
-      top: -15px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 30px;
-      height: 30px;
-      background-color: var(--bleu-fonce);
-      border: 2px solid;
-      border-radius: 50%;
-    }
-
-    .corps-card:nth-child(1)::before {
-      border-color: var(--bleu-ciel);
-    }
-
-    .corps-card:nth-child(2)::before {
-      border-color: var(--blanc);
-    }
-
-    .corps-card:nth-child(3)::before {
-      border-color: var(--rouge);
-    }
-
-    .corps-card:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
-    }
-
-    .corps-number {
-      font-family: 'Cinzel', serif;
-      font-size: 18px;
-      letter-spacing: 2px;
-      color: var(--or);
-      margin-bottom: 10px;
-    }
-
-    .corps-title {
-      font-family: 'Cinzel', serif;
-      font-size: 28px;
-      font-weight: 800;
-      color: var(--blanc);
+    .pilier-card h3 {
+      font-size: 22px;
+      font-weight: 700;
       margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .pilier-card p {
+      font-size: 14px;
+      color: #bbb;
+      line-height: 1.8;
+      letter-spacing: 0.3px;
+    }
+
+    /* ===== ABOUT SECTION ===== */
+    .about-section {
+      background-color: #0a0a0a;
+      padding: 100px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .about-content h2 {
+      font-size: 48px;
+      font-weight: 800;
+      margin-bottom: 30px;
       letter-spacing: 2px;
     }
 
-    .corps-description {
-      font-size: 13px;
-      color: #aaa;
-      line-height: 1.8;
+    .about-content p {
+      font-size: 15px;
+      color: #bbb;
+      margin-bottom: 20px;
+      line-height: 1.9;
+      letter-spacing: 0.5px;
+    }
+
+    .about-image {
+      width: 100%;
+      height: 400px;
+      background: linear-gradient(135deg, #002395 0%, #c41e3a 100%);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 60px;
     }
 
     /* ===== FOOTER ===== */
     footer {
-      background-color: var(--bleu-marine);
-      border-top: 2px solid var(--or);
-      padding: 60px 50px;
-      margin-top: 100px;
+      background-color: #0a0a0a;
+      border-top: 1px solid #222;
+      padding: 60px 20px 30px;
     }
 
     .footer-content {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 60px;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
       max-width: 1200px;
       margin: 0 auto 40px;
     }
 
     .footer-section h4 {
-      font-family: 'Cinzel', serif;
       font-size: 16px;
-      letter-spacing: 2px;
-      color: var(--or);
+      font-weight: 700;
       margin-bottom: 20px;
+      letter-spacing: 1px;
       text-transform: uppercase;
     }
 
@@ -427,126 +377,188 @@
       margin-bottom: 12px;
     }
 
-    .footer-section a {
-      color: var(--blanc);
+    .footer-section ul li a {
+      color: #aaa;
       text-decoration: none;
-      font-size: 13px;
-      transition: var(--transition);
+      font-size: 14px;
+      transition: all 0.3s ease;
     }
 
-    .footer-section a:hover {
-      color: var(--or);
+    .footer-section ul li a:hover {
+      color: #c41e3a;
+      padding-left: 8px;
     }
 
     .footer-bottom {
-      border-top: 1px solid rgba(212, 175, 55, 0.3);
-      padding-top: 30px;
       text-align: center;
-      font-size: 12px;
-      color: #aaa;
-      letter-spacing: 1px;
+      border-top: 1px solid #222;
+      padding-top: 30px;
+      color: #666;
+      font-size: 13px;
     }
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
       .navbar {
-        flex-direction: column;
-        padding: 15px 20px;
-        gap: 20px;
-      }
-
-      .nav-links {
         flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+        height: auto;
       }
 
-      .hero-main {
-        font-size: 36px;
+      .navbar-left,
+      .navbar-center,
+      .navbar-right {
+        width: 100%;
+        height: 50px;
       }
 
-      .corps-container {
+      .navbar-center {
+        gap: 15px;
+        order: 3;
+        width: 100%;
+      }
+
+      .navbar-center a {
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 500px;
+        padding: 60px 20px;
+        background: linear-gradient(180deg, #002395 0%, #c41e3a 100%);
+      }
+
+      .hero h1 {
+        font-size: 54px;
+      }
+
+      .hero h2,
+      .hero h3 {
+        font-size: 18px;
+      }
+
+      .about-section {
         grid-template-columns: 1fr;
+        padding: 60px 20px;
       }
 
-      .footer-content {
+      .piliers-grid {
         grid-template-columns: 1fr;
+        gap: 25px;
       }
 
-      .section-title::before,
-      .section-title::after {
-        display: none;
+      .piliers-title {
+        font-size: 40px;
       }
     }
+
+    @media (max-width: 480px) {
+      .navbar-left {
+        font-size: 12px;
+        padding-left: 15px;
+      }
+
+      .navbar-center {
+        gap: 10px;
+      }
+
+      .navbar-center a {
+        font-size: 11px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: 2px;
+      }
+
+      .hero h2,
+      .hero h3 {
+        font-size: 16px;
+      }
+
+      .piliers-title {
+        font-size: 32px;
+      }
+
+      .btn {
+        padding: 14px 35px;
+        font-size: 12px;
+      }
+    }
+
   </style>
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar">
-    <a href="#" class="navbar-logo">
-      <div style="width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; background: linear-gradient(90deg, #002395 0%, #002395 33.33%, #FFFFFF 33.33%, #FFFFFF 66.66%, #c41e3a 66.66%, #c41e3a 100%); border-radius: 5px; font-weight: bold; color: white; font-size: 20px;">FR</div>
-      <div class="logo-text">
-        <h1>82GRP</h1>
-        <p>Grenadiers à Pied</p>
-      </div>
-    </a>
-
-    <ul class="nav-links">
-      <li><a href="#regiment">Le Régiment</a></li>
-      <li><a href="#structure">Compagnies</a></li>
-      <li><a href="#trailer">Trailer</a></li>
-      <li><a href="#calendar">Calendrier</a></li>
-      <li><a href="#gallery">Galerie</a></li>
-      <li><a href="#recrutement">Rejoindre</a></li>
-      <li><a href="#discord" class="discord-btn">🔗 DISCORD</a></li>
-    </ul>
+    <div class="navbar-left">🇫🇷 82ème GRP</div>
+    <div class="navbar-center">
+      <a href="#histoire">Histoire</a>
+      <a href="#regiment">Régiment</a>
+      <a href="#apropos">À Propos</a>
+      <a href="#recrutement">Recrutement</a>
+    </div>
+    <div class="navbar-right">CONTACT</div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section class="hero">
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="accueil">
     <div class="hero-content">
-      <p class="hero-title">La Garde, Bien Sûr!</p>
-      <h1 class="hero-main">
-        UN GRENADIER DEBOUT,<br>
-        <span class="or">LA LIGNE TIENDRA.</span>
-      </h1>
-      <p class="hero-quote">« Esprit du 82<sup>ème</sup> Régiment de Grenadiers à Pied »</p>
+      <h2>Bienvenue dans le</h2>
+      <h1>82ème</h1>
+      <h3>Grande Régiment Protecteur</h3>
+      <p>"L'honneur, le courage et la discipline"</p>
+      <button class="btn">Rejoindre nos rangs</button>
     </div>
   </section>
 
-  <!-- ===== STRUCTURE DU RÉGIMENT ===== -->
-  <section class="structure-section" id="structure">
-    <div class="section-header">
-      <p class="section-label">Ordre de Bataille</p>
-      <h2 class="section-title">Structure du Régiment</h2>
-      <p class="section-subtitle">Trois Corps, six unités, un seul drapeau. Chacun y trouve sa place selon son style de jeu.</p>
-    </div>
+  <!-- ===== PILIERS SECTION ===== -->
+  <section class="piliers-section" id="piliers">
+    <h2 class="piliers-title">Les 4 Piliers</h2>
+    <div class="piliers-underline"></div>
+    <p class="piliers-subtitle">Les valeurs fondamentales de notre régiment</p>
 
-    <div class="commandement-box">
-      <h3>Commandement Général</h3>
-      <p>État-Major du 82GRP</p>
-    </div>
-
-    <div class="corps-container">
-      <div class="corps-card">
-        <p class="corps-number">🔵</p>
-        <h3 class="corps-title">1<sup>ER</sup> CORPS</h3>
-        <p class="corps-description">« De l'assurance avec la précision »<br><br>L'infanterie légère, rapide et agile. Nos fantassins d'élite qui frappent avec efficacité et repartent avant que l'ennemi n'ait le temps de réagir.</p>
+    <div class="piliers-grid">
+      <div class="pilier-card">
+        <div class="pilier-icon">⚔️</div>
+        <h3>Honneur</h3>
+        <p>Nous honorons nos traditions et défendons nos valeurs avec fierté et respect envers nos anciens.</p>
       </div>
 
-      <div class="corps-card">
-        <p class="corps-number">⚪</p>
-        <h3 class="corps-title">2<sup>ÈME</sup> CORPS</h3>
-        <p class="corps-description">« La où frappent le désese vaut »<br><br>L'épine dorsale de notre régiment. Des soldats disciplinés, formés aux combats rapprochés et à la manœuvre coordonnée.</p>
+      <div class="pilier-card">
+        <div class="pilier-icon">🦁</div>
+        <h3>Courage</h3>
+        <p>Nous affrontons les défis avec détermination, bravoure et sans jamais reculer face aux adversités.</p>
       </div>
 
-      <div class="corps-card">
-        <p class="corps-number">🔴</p>
-        <h3 class="corps-title">3<sup>ÈME</sup> CORPS</h3>
-        <p class="corps-description">« La Garde, encore une marche! »<br><br>La Garde du régiment. Nos grenadiers d'élite, les plus expérimentés et les plus redoutés. Ils incarnent la fierté du 82.</p>
+      <div class="pilier-card">
+        <div class="pilier-icon">🛡️</div>
+        <h3>Discipline</h3>
+        <p>Nous respectons l'ordre, la structure et les principes fondamentaux de notre organisation militaire.</p>
+      </div>
+
+      <div class="pilier-card">
+        <div class="pilier-icon">👑</div>
+        <h3>Excellence</h3>
+        <p>Nous visons la perfection dans chaque action et chaque décision prise par nos soldats.</p>
       </div>
     </div>
+  </section>
+
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-section" id="apropos">
+    <div class="about-content">
+      <h2>À Propos du 82ème</h2>
+      <p>
+        Le 82ème Grande Régiment Protecteur est une unité d'élite fondée sur les principes de l'honneur, du courage et de la discipline. 
+        Avec une longue histoire de service, nous continuons à protéger et à servir avec intégrité.
+      </p>
+      <p>
+        Nos soldats sont entraînés aux plus hauts standards militaires. Nous cherchons constamment des individus motivés et passionnés 
+        à rejoindre nos rangs pour continuer notre mission de protection et de service.
+      </p>
+    </div>
+    <div class="about-image">🎖️</div>
   </section>
 
   <!-- ===== FOOTER ===== -->
@@ -555,35 +567,46 @@
       <div class="footer-section">
         <h4>Navigation</h4>
         <ul>
-          <li><a href="#regiment">Le Régiment</a></li>
-          <li><a href="#structure">Structure</a></li>
-          <li><a href="#trailer">Trailer</a></li>
-          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#piliers">Piliers</a></li>
+          <li><a href="#apropos">À Propos</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
-        <h4>À Propos</h4>
+        <h4>Régiment</h4>
         <ul>
-          <li><a href="#histoire">Notre Histoire</a></li>
-          <li><a href="#valeurs">Nos Valeurs</a></li>
-          <li><a href="#recrutement">Rejoindre</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#">Histoire</a></li>
+          <li><a href="#">Structure</a></li>
+          <li><a href="#">Traditions</a></li>
+          <li><a href="#">Galerie</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Rejoindre</h4>
+        <ul>
+          <li><a href="#">Candidature</a></li>
+          <li><a href="#">Recrutement</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">Formations</a></li>
         </ul>
       </div>
 
       <div class="footer-section">
         <h4>Nous Contacter</h4>
         <ul>
-          <li><a href="#">🔗 Discord</a></li>
-          <li><a href="#">📧 Email</a></li>
-          <li><a href="#">🎮 Holdfast</a></li>
+          <li><a href="#">Discord</a></li>
+          <li><a href="#">Email</a></li>
+          <li><a href="#">Réseaux Sociaux</a></li>
+          <li><a href="#">Support</a></li>
         </ul>
       </div>
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 82<sup>ème</sup> GRP - Grenadiers à Pied | Tous droits réservés | Holdfast: Nations At War</p>
+      <p>&copy; 2026 82ème GRP - Grande Régiment Protecteur | Tous droits réservés</p>
     </div>
   </footer>
 
