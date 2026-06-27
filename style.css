@@ -837,86 +837,6 @@ body {
   font-weight: 600;
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .timeline-item {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .timeline-item.left .timeline-card,
-  .timeline-item.right .timeline-card {
-    grid-column: 1 !important;
-    text-align: left !important;
-  }
-
-  .timeline-item.left .timeline-dot,
-  .timeline-item.right .timeline-dot {
-    grid-column: 1 !important;
-  }
-
-  .timeline::before {
-    left: 25px;
-  }
-
-  .timeline-card {
-    padding: 30px;
-    margin-left: 60px;
-  }
-}
-
-@media (max-width: 768px) {
-  .timeline-item {
-    margin-bottom: 60px;
-  }
-
-  .timeline-card {
-    padding: 25px;
-    margin-left: 50px;
-  }
-
-  .timeline-date {
-    font-size: 1.5rem;
-  }
-
-  .timeline-title {
-    font-size: 1.2rem;
-  }
-
-  .timeline-text {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .timeline-item {
-    margin-bottom: 50px;
-  }
-
-  .timeline-card {
-    padding: 20px;
-    margin-left: 40px;
-  }
-
-  .timeline-dot {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .timeline-date {
-    font-size: 1.3rem;
-  }
-
-  .timeline-title {
-    font-size: 1rem;
-  }
-
-  .timeline-text {
-    font-size: 0.9rem;
-  }
-}
-
 /* ===== TRAILER SECTION ===== */
 .trailer-section {
   padding: 80px 0;
@@ -1050,402 +970,7 @@ body {
   display: block;
 }
 
-/* ===== RECRUTEMENT ===== */
-.recrutement-section {
-  padding: 120px 0;
-  background: linear-gradient(180deg, rgba(13, 31, 60, 0.3) 0%, rgba(13, 31, 60, 0.1) 100%);
-  position: relative;
-}
-
-.recrutement-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
-}
-
-.recrutement-content {
-  text-align: center;
-}
-
-.recrutement-text {
-  color: var(--text-muted);
-  max-width: 600px;
-  margin: 0 auto 55px;
-  line-height: 1.95;
-  font-size: 1.05rem;
-}
-
-.recrutement-steps {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 55px;
-  flex-wrap: wrap;
-}
-
-.step {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-  transition: all 0.3s ease;
-}
-
-.step:hover {
-  transform: translateY(-10px);
-}
-
-.step-number {
-  width: 50px;
-  height: 50px;
-  background: linear-gradient(135deg, var(--gold), var(--gold-light));
-  color: var(--dark);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
-  font-weight: 900;
-}
-
-.step p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  max-width: 80px;
-}
-
-.step-arrow {
-  color: var(--gold);
-  font-size: 1.5rem;
-  opacity: 0.5;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  background: linear-gradient(180deg, rgba(6, 13, 26, 0.95), var(--dark));
-  border-top: 2px solid rgba(201, 168, 76, 0.15);
-  padding: 80px 0 20px;
-  position: relative;
-}
-
-.footer::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 60px;
-  margin-bottom: 40px;
-}
-
-.footer-brand h3 {
-  font-family: 'Cinzel', serif;
-  font-size: 1.5rem;
-  color: var(--gold);
-  margin-bottom: 15px;
-  letter-spacing: 2px;
-}
-
-.footer-brand p {
-  color: var(--text-muted);
-  line-height: 1.8;
-  margin-bottom: 15px;
-}
-
-.footer-quote {
-  font-style: italic;
-  color: var(--gold);
-  font-size: 0.9rem;
-}
-
-.footer-links h4,
-.footer-social h4 {
-  font-family: 'Cinzel', serif;
-  color: var(--gold);
-  margin-bottom: 15px;
-  font-size: 1.1rem;
-  letter-spacing: 1px;
-}
-
-.footer-links ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.footer-links a {
-  color: var(--text-muted);
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-.footer-links a:hover {
-  color: var(--gold);
-  transform: translateX(5px);
-}
-
-.footer-discord {
-  display: inline-block;
-  padding: 12px 25px;
-  background: linear-gradient(135deg, rgba(88, 101, 242, 0.8), rgba(114, 137, 218, 0.8));
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-weight: 600;
-  transition: all 0.3s ease;
-  border: 1px solid rgba(88, 101, 242, 0.5);
-}
-
-.footer-discord:hover {
-  background: linear-gradient(135deg, #5865F2, #7289DA);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 25px rgba(88, 101, 242, 0.3);
-}
-
-.footer-bottom {
-  border-top: 1px solid rgba(201, 168, 76, 0.15);
-  padding-top: 20px;
-  text-align: center;
-  color: var(--text-muted);
-  font-size: 0.9rem;
-}
-
-/* ===== SCROLL BAR ===== */
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--dark);
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(201, 168, 76, 0.4);
-  border-radius: 6px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(201, 168, 76, 0.7);
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 1024px) {
-  .hero-title {
-    font-size: 3.5rem;
-  }
-
-  .hero-name {
-    font-size: 2rem;
-  }
-
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .timeline::before {
-    display: none;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    margin-left: 0;
-    margin-right: 0;
-    text-align: left;
-    padding-left: 80px;
-  }
-
-  .timeline-dot {
-    left: 25px;
-    transform: translateX(-50%);
-  }
-}
-
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--dark-2);
-    gap: 0;
-    border-bottom: 2px solid rgba(201, 168, 76, 0.15);
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .nav-links li {
-    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
-  }
-
-  .nav-links a {
-    display: block;
-    padding: 15px 20px;
-  }
-
-  .nav-toggle {
-    display: block;
-  }
-
-  .hero {
-    margin-top: 80px;
-  }
-
-  .hero-title {
-    font-size: 2.5rem;
-  }
-
-  .hero-number {
-    font-size: 3rem;
-  }
-
-  .hero-name {
-    font-size: 1.5rem;
-  }
-
-  .hero-quote {
-    font-size: 1.3rem;
-  }
-
-  .section-header h2 {
-    font-size: 2.2rem;
-  }
-
-  .section-title {
-    font-size: 2.2rem;
-  }
-
-  .piliers-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pilier-card {
-    padding: 35px 25px;
-  }
-
-  .hero-stats {
-    gap: 20px;
-  }
-
-  .stat-number {
-    font-size: 1.8rem;
-  }
-
-  .hero-buttons {
-    flex-direction: column;
-  }
-
-  .btn-primary,
-  .btn-secondary {
-    width: 100%;
-  }
-
-  .footer-grid {
-    gap: 40px;
-  }
-
-  .trailer-frame {
-    border-width: 2px;
-  }
-
-  .trailer-frame iframe {
-    min-height: 300px;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero {
-    margin-top: 70px;
-    padding: 20px;
-  }
-
-  .hero-title {
-    font-size: 1.8rem;
-  }
-
-  .hero-number {
-    font-size: 2.2rem;
-  }
-
-  .hero-name {
-    font-size: 1.2rem;
-  }
-
-  .hero-quote {
-    font-size: 1rem;
-  }
-
-  .section-header h2,
-  .section-title {
-    font-size: 1.6rem;
-  }
-
-  .pilier-card {
-    padding: 25px 20px;
-  }
-
-  .pilier-icon {
-    font-size: 2.5rem;
-  }
-
-  .about-text h2 {
-    font-size: 1.8rem;
-  }
-
-  .about-img-frame {
-    aspect-ratio: auto;
-    min-height: 300px;
-  }
-
-  .recrutement-steps {
-    gap: 10px;
-  }
-
-  .step-number {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2rem;
-  }
-
-  .step-arrow {
-    display: none;
-  }
-
-  .timeline-card {
-    padding: 20px 15px;
-  }
-
-  .timeline-date {
-    font-size: 1.2rem;
-  }
-
-  .timeline-title {
-    font-size: 1.1rem;
-  }
-
-  .histoire
-
-  /* ===== GRADES SECTION ===== */
+/* ===== GRADES SECTION ===== */
 .grades-section {
   background: var(--dark);
   padding: 80px 20px;
@@ -1550,6 +1075,11 @@ body {
 .grade-item.center .grade-card {
   width: 100%;
   max-width: 600px;
+}
+
+.featured-grade-item {
+  position: relative;
+  z-index: 5;
 }
 
 /* POINT CENTRAL */
@@ -1838,18 +1368,238 @@ body {
   display: block;
 }
 
+/* ===== RECRUTEMENT ===== */
+.recrutement-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, rgba(13, 31, 60, 0.3) 0%, rgba(13, 31, 60, 0.1) 100%);
+  position: relative;
+}
+
+.recrutement-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
+}
+
+.recrutement-content {
+  text-align: center;
+}
+
+.recrutement-text {
+  color: var(--text-muted);
+  max-width: 600px;
+  margin: 0 auto 55px;
+  line-height: 1.95;
+  font-size: 1.05rem;
+}
+
+.recrutement-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 55px;
+  flex-wrap: wrap;
+}
+
+.step {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-10px);
+}
+
+.step-number {
+  width: 50px;
+  height: 50px;
+  background: linear-gradient(135deg, var(--gold), var(--gold-light));
+  color: var(--dark);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.step p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  max-width: 80px;
+}
+
+.step-arrow {
+  color: var(--gold);
+  font-size: 1.5rem;
+  opacity: 0.5;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  background: linear-gradient(180deg, rgba(6, 13, 26, 0.95), var(--dark));
+  border-top: 2px solid rgba(201, 168, 76, 0.15);
+  padding: 80px 0 20px;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 60px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+  font-family: 'Cinzel', serif;
+  font-size: 1.5rem;
+  color: var(--gold);
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.footer-brand p {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.footer-quote {
+  font-style: italic;
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+}
+
+.footer-links ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+  transform: translateX(5px);
+}
+
+.footer-discord {
+  display: inline-block;
+  padding: 12px 25px;
+  background: linear-gradient(135deg, rgba(88, 101, 242, 0.8), rgba(114, 137, 218, 0.8));
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(88, 101, 242, 0.5);
+}
+
+.footer-discord:hover {
+  background: linear-gradient(135deg, #5865F2, #7289DA);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(88, 101, 242, 0.3);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(201, 168, 76, 0.15);
+  padding-top: 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* ===== SCROLL BAR ===== */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.4);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 76, 0.7);
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
-  .grade-item {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+
+  .hero-name {
+    font-size: 2rem;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .timeline::before,
+  .grades-timeline::before {
+    left: 25px;
+  }
+
+  .timeline-item.left,
+  .timeline-item.right,
+  .grade-item.left,
+  .grade-item.right {
     grid-template-columns: 1fr;
     gap: 20px;
   }
 
+  .timeline-item.left .timeline-card,
+  .timeline-item.right .timeline-card,
   .grade-item.left .grade-card,
   .grade-item.right .grade-card {
     grid-column: 1 !important;
+    text-align: left !important;
   }
 
+  .timeline-item.left .timeline-dot,
+  .timeline-item.right .timeline-dot,
   .grade-item.left .grade-dot,
   .grade-item.right .grade-dot {
     grid-column: 1 !important;
@@ -1857,33 +1607,124 @@ body {
     margin-left: 60px;
   }
 
-  .grades-timeline::before {
-    left: 25px;
-  }
-
+  .timeline-card,
   .grade-card {
     padding: 30px;
-    margin-left: 0;
   }
 }
 
 @media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background: var(--dark-2);
+    gap: 0;
+    border-bottom: 2px solid rgba(201, 168, 76, 0.15);
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 15px 20px;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero {
+    margin-top: 80px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-number {
+    font-size: 3rem;
+  }
+
+  .hero-name {
+    font-size: 1.5rem;
+  }
+
+  .hero-quote {
+    font-size: 1.3rem;
+  }
+
+  .section-header h2,
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .piliers-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pilier-card {
+    padding: 35px 25px;
+  }
+
+  .hero-stats {
+    gap: 20px;
+  }
+
+  .stat-number {
+    font-size: 1.8rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    width: 100%;
+  }
+
+  .footer-grid {
+    gap: 40px;
+  }
+
+  .trailer-frame {
+    border-width: 2px;
+  }
+
+  .trailer-frame iframe {
+    min-height: 300px;
+  }
+
+  .timeline-item,
   .grade-item {
     margin-bottom: 60px;
   }
 
+  .timeline-card,
   .grade-card {
     padding: 25px;
   }
 
+  .timeline-date {
+    font-size: 1.5rem;
+  }
+
+  .timeline-title,
   .grade-name {
     font-size: 1.3rem;
   }
 
-  .grade-name-featured {
-    font-size: 1.6rem;
-  }
-
+  .timeline-text,
   .grade-text {
     font-size: 0.95rem;
   }
@@ -1898,14 +1739,69 @@ body {
 }
 
 @media (max-width: 480px) {
-  .grades-timeline::before {
-    left: 15px;
+  .hero {
+    margin-top: 70px;
+    padding: 20px;
   }
 
+  .hero-title {
+    font-size: 1.8rem;
+  }
+
+  .hero-number {
+    font-size: 2.2rem;
+  }
+
+  .hero-name {
+    font-size: 1.2rem;
+  }
+
+  .hero-quote {
+    font-size: 1rem;
+  }
+
+  .section-header h2,
+  .section-title {
+    font-size: 1.6rem;
+  }
+
+  .pilier-card {
+    padding: 25px 20px;
+  }
+
+  .pilier-icon {
+    font-size: 2.5rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-img-frame {
+    aspect-ratio: auto;
+    min-height: 300px;
+  }
+
+  .recrutement-steps {
+    gap: 10px;
+  }
+
+  .step-number {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+
+  .timeline-item,
   .grade-item {
     margin-bottom: 50px;
   }
 
+  .timeline-card,
   .grade-card {
     padding: 20px;
     margin-left: 40px;
@@ -1916,6 +1812,7 @@ body {
     margin-left: 35px;
   }
 
+  .timeline-dot,
   .grade-dot {
     width: 40px;
     height: 40px;
@@ -1930,6 +1827,11 @@ body {
     font-size: 2.5rem;
   }
 
+  .timeline-date {
+    font-size: 1.2rem;
+  }
+
+  .timeline-title,
   .grade-name {
     font-size: 1.1rem;
   }
@@ -1938,6 +1840,7 @@ body {
     font-size: 1.3rem;
   }
 
+  .timeline-text,
   .grade-text {
     font-size: 0.9rem;
   }
@@ -1963,7 +1866,21 @@ body {
     font-size: 1.2rem;
   }
 
+  .grades-quote cite {
+    font-size: 0.85rem;
+  }
+
   .grade-responsibilities {
     font-size: 0.85rem;
+  }
+
+  .histoire-quote,
+  .trailer-frame {
+    border-width: 1px;
+    padding: 30px 20px;
+  }
+
+  .histoire-quote blockquote {
+    font-size: 1.2rem;
   }
 }
