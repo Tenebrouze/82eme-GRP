@@ -18,13 +18,14 @@ body {
 
 /* ========== HEADER ========== */
 header {
-    background: linear-gradient(135deg, #1a1a2e 0%, #0f3460 100%);
+    background: rgba(6, 13, 26, 0.9);
     border-bottom: 4px solid #d4af37;
     padding: 1.5rem 0;
     position: sticky;
     top: 0;
     z-index: 1000;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.8);
+    transition: all 0.3s ease;
 }
 
 .header-container {
@@ -65,9 +66,10 @@ nav {
     display: flex;
     gap: 2rem;
     flex-wrap: wrap;
+    align-items: center;
 }
 
-nav a {
+.nav-link {
     color: #e0e0e0;
     text-decoration: none;
     font-weight: 500;
@@ -75,10 +77,13 @@ nav a {
     font-size: 0.9rem;
     letter-spacing: 1px;
     transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
 }
 
-nav a:hover {
+.nav-link:hover,
+.nav-link.active {
     color: #d4af37;
+    border-bottom: 2px solid #d4af37;
 }
 
 .discord-btn {
@@ -87,12 +92,45 @@ nav a:hover {
     border-radius: 5px;
     transition: all 0.3s;
     border: 2px solid #5865F2;
+    color: white;
+    text-decoration: none;
 }
 
 .discord-btn:hover {
     background: #4752C4;
     border-color: #d4af37;
     color: #d4af37;
+}
+
+/* ========== HAMBURGER MENU ========== */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 0.5rem;
+    z-index: 1001;
+}
+
+.nav-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #d4af37;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.nav-toggle.active span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.nav-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* ========== HERO SECTION ========== */
@@ -188,6 +226,29 @@ nav a:hover {
 .hero-btn:hover {
     background: transparent;
     color: #d4af37;
+}
+
+.hero-scroll {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 2rem;
+    color: #d4af37;
+    animation: bounce 2s infinite;
+    transition: all 0.3s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateX(-50%) translateY(0);
+    }
+    40% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+    60% {
+        transform: translateX(-50%) translateY(-5px);
+    }
 }
 
 /* ========== SECTIONS GÉNÉRALES ========== */
@@ -424,6 +485,12 @@ section h3 {
 .timeline-item {
     margin-bottom: 3rem;
     position: relative;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+.timeline-item.visible {
+    animation: fadeIn 0.6s ease-out forwards;
 }
 
 .timeline-item:nth-child(odd) {
@@ -454,11 +521,11 @@ section h3 {
     padding: 1.5rem;
     border-radius: 5px;
     transition: all 0.3s;
-    animation: fadeIn 0.8s ease-out;
 }
 
 .timeline-content:hover {
     box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    transform: translateY(-5px);
 }
 
 .timeline-year {
@@ -499,7 +566,7 @@ section h3 {
 }
 
 .quote-author {
-    text-align: right !important;
+    text-align: right;
 }
 
 /* ========== RECRUTEMENT ========== */
@@ -526,6 +593,12 @@ section h3 {
     border-radius: 5px;
     text-align: center;
     position: relative;
+    transition: all 0.3s;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(212, 175, 55, 0.3);
 }
 
 .process-step h4 {
@@ -577,6 +650,7 @@ section h3 {
     color: #e0e0e0;
     border-radius: 3px;
     font-family: inherit;
+    transition: all 0.3s;
 }
 
 .form-group textarea {
@@ -589,6 +663,7 @@ section h3 {
 .form-group select:focus {
     outline: none;
     box-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+    border-color: #d4af37;
 }
 
 .submit-btn {
@@ -643,18 +718,35 @@ footer p {
 
 /* ========== RESPONSIVE ========== */
 @media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        gap: 1rem;
+    .nav-toggle {
+        display: flex;
     }
 
     nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: rgba(6, 13, 26, 0.95);
         flex-direction: column;
-        gap: 0.5rem;
+        padding: 2rem;
+        border-bottom: 2px solid #d4af37;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
     }
 
-    nav a {
-        font-size: 0.8rem;
+    nav.active {
+        max-height: 500px;
+    }
+
+    .nav-link {
+        padding: 0.8rem 0;
+        border-bottom: 1px solid #d4af37;
+    }
+
+    .header-container {
+        flex-wrap: nowrap;
     }
 
     .hero h1 {
@@ -709,6 +801,37 @@ footer p {
     }
 
     .recruitment-process {
+        grid-template-columns: 1fr;
+    }
+
+    section h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1.1rem;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .compagnies-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values {
         grid-template-columns: 1fr;
     }
 }
