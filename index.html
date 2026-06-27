@@ -1,344 +1,459 @@
+HTML
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>82ème Régiment de Grenadier à Pied - Holdfast</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>82ème Régiment de Grenadier à Pied</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- ========== HEADER ========== -->
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <div class="logo-img">⚜</div>
-                82 GRP
-            </div>
-            <nav>
-                <a href="#about">LE RÉGIMENT</a>
-                <a href="#compagnies">COMPAGNIES</a>
-                <a href="#trailer">TRAILER</a>
-                <a href="#histoire">HISTOIRE</a>
-                <a href="#contact">REJOINDRE</a>
-                <a href="https://discord.gg/VOTRE_LIEN" class="discord-btn" target="_blank">DISCORD</a>
-            </nav>
-        </div>
-    </header>
 
-    <!-- ========== HERO ========== -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>82E RGP</h1>
-            <p>Régiment de Grenadier à Pied</p>
-            <div class="hero-motto">
-                <span class="motto-item">🎖️ Honneur</span>
-                <span class="motto-item">⚔️ Courage</span>
-                <span class="motto-item">📋 Discipline</span>
-            </div>
-            <a href="#about" class="hero-btn">Découvrir</a>
-        </div>
-    </section>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container container">
+      <div class="nav-logo">
+        <span class="logo-text">82<span class="superscript">E</span> RGP</span>
+      </div>
+      <button class="nav-toggle" id="navToggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="nav-links" id="navLinks">
+        <a href="#hero" class="nav-link">Accueil</a>
+        <a href="#about" class="nav-link">À Propos</a>
+        <a href="#histoire" class="nav-link">Histoire</a>
+        <a href="#grades" class="nav-link">Grades</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
 
-    <!-- ========== ABOUT ========== -->
-    <section id="about">
-        <div class="section-title">QUI SOMMES-NOUS</div>
-        <h2>Le 82E Régiment de Grenadier à Pied</h2>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content container">
+      <h1 class="hero-title">82<span class="superscript">E</span> RGP</h1>
+      <p class="hero-subtitle">Régiment de Grenadier à Pied</p>
+      <p class="hero-tagline">Honneur • Courage • Discipline</p>
+      <a href="#about" class="hero-btn">Découvrir</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M12 5v14M19 12l-7 7-7-7"></path>
+      </svg>
+    </div>
+  </section>
 
-        <div class="about-content">
-            <div class="about-text">
-                <h3>Une Unité de Renom</h3>
-                <p>Le 82ème Régiment de Grenadier à Pied est l'une des plus anciennes et prestigieuses unités militaires d'Europe. Fondé au cœur de l'Empire, il a participé à tous les grands conflits qui ont façonné notre continent.</p>
-                <p>Avec plus de deux siècles d'histoire, le régiment symbolise l'honneur militaire, le courage face à l'adversité et la discipline inébranlable. Ses soldats sont formés aux plus hauts standards et prêts à servir.</p>
-            </div>
-            <div class="values">
-                <div class="value-card">
-                    <h4>🎖️ Honneur</h4>
-                    <p>Chaque soldat porte l'honneur du régiment avec fierté et distinction.</p>
-                </div>
-                <div class="value-card">
-                    <h4>⚔️ Courage</h4>
-                    <p>Face aux défis, nos guerriers ne fléchissent jamais et avancent.</p>
-                </div>
-                <div class="value-card">
-                    <h4>📋 Discipline</h4>
-                    <p>L'ordre et la structure sont les fondements de notre force collective.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== COMPAGNIES ========== -->
-    <section id="compagnies">
-        <div class="section-title">HIÉRARCHIE MILITAIRE</div>
-        <h2>Grades du Régiment</h2>
-
-        <div class="compagnies-grid">
-            <!-- 1ER CORPS -->
-            <div class="compagnie-card">
-                <h4>1ER CORPS - ARTILLERIE</h4>
-                <p>« Du tonnerre naît la victoire »</p>
-                <div class="hierarchy">
-                    <div class="rank">
-                        <span class="rank-title">Général d'Artillerie</span>
-                        <span>Chef de Corps</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Colonel</span>
-                        <span>Chef de Batterie</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Sergent-Chef</span>
-                        <span>Chef de Section</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Canonnier</span>
-                        <span>Servant de Pièce</span>
-                    </div>
-                </div>
-                <div class="compagnie-motto">Maîtrise du feu et puissance offensive du régiment</div>
-            </div>
-
-            <!-- 2ÈME CORPS -->
-            <div class="compagnie-card">
-                <h4>2ÈME CORPS - INFANTERIE</h4>
-                <p>« Là où nous passons le silence suit »</p>
-                <div class="hierarchy">
-                    <div class="rank">
-                        <span class="rank-title">Commandant</span>
-                        <span>Chef du Corps</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Major</span>
-                        <span>Officier de terrain</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Marie Louise</span>
-                        <span>Soldat du Rang</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Voltigeur</span>
-                        <span>Combattant Élite</span>
-                    </div>
-                </div>
-                <div class="compagnie-motto">L'épine dorsale du régiment, flexibilité et adaptabilité</div>
-            </div>
-
-            <!-- 3ÈME CORPS -->
-            <div class="compagnie-card">
-                <h4>3ÈME CORPS - GARDE & CAVALERIE</h4>
-                <p>« La Garde meurt mais ne se rend pas ! »</p>
-                <div class="hierarchy">
-                    <div class="rank">
-                        <span class="rank-title">Général de Cavalerie</span>
-                        <span>Commandant Suprême</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Colonel</span>
-                        <span>Chef de Régiment</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Capitaine</span>
-                        <span>Chef d'Escadron</span>
-                    </div>
-                    <div class="rank">
-                        <span class="rank-title">Cavalier</span>
-                        <span>Guerrier Monté</span>
-                    </div>
-                </div>
-                <div class="compagnie-motto">L'élite du régiment, mobilité et puissance de choc</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ========== TRAILER ========== -->
-    <section id="trailer">
-        <div class="section-title">VIDÉO OFFICIELLE</div>
-        <h2>Trailer du Régiment</h2>
-        <p>Découvrez l'épopée du 82ème Régiment de Grenadier à Pied en images et en son.</p>
-
-        <h3>L'Héritage de la Gloire</h3>
-        <p>Ce trailer présente le 82ème Régiment dans Holdfast: Nations At War. Voyez comment nos grenadiers combattent avec honneur et distinction sur tous les champs de bataille.</p>
-
-        <div class="video-container">
-            <iframe src="https://www.youtube.com/embed/VOTRE_VIDEO_ID" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-            </iframe>
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-section" id="about">
+    <div class="container">
+      <div class="section-header centered">
+        <span class="section-badge">⚜ QUI SOMMES-NOUS ⚜</span>
+        <h2 class="section-title">Le 82<span class="superscript">E</span> Régiment de Grenadier à Pied</h2>
+        <div class="gold-line"></div>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h3 class="about-subtitle">Une Unité de Renom</h3>
+          <p>Le 82ème Régiment de Grenadier à Pied est l'une des plus anciennes et prestigieuses unités militaires d'Europe. Fondé au cœur de l'Empire, il a participé à tous les grands conflits qui ont façonné notre continent.</p>
+          <p>Avec plus de deux siècles d'histoire, le régiment symbolise l'honneur militaire, le courage face à l'adversité et la discipline inébranlable. Ses soldats sont formés aux plus hauts standards et prêts à servir.</p>
         </div>
 
-        <div class="trailer-info">
-            <div class="trailer-stat">
-                <div class="trailer-stat-value">1:12</div>
-                <div>Durée</div>
+        <div class="about-pillars">
+          <div class="pilier-card">
+            <div class="pilier-icon">
+              <i class="fas fa-shield"></i>
             </div>
-            <div class="trailer-stat">
-                <div class="trailer-stat-value">Janvier 2026</div>
-                <div>Publié</div>
+            <h4 class="pilier-title">Honneur</h4>
+            <p class="pilier-text">Chaque soldat porte l'honneur du régiment avec fierté et distinction.</p>
+          </div>
+
+          <div class="pilier-card">
+            <div class="pilier-icon">
+              <i class="fas fa-fist-raised"></i>
             </div>
-            <div class="trailer-stat">
-                <div class="trailer-stat-value">HD 1080p</div>
-                <div>Qualité</div>
+            <h4 class="pilier-title">Courage</h4>
+            <p class="pilier-text">Face aux défis, nos guerriers ne fléchissent jamais et avancent.</p>
+          </div>
+
+          <div class="pilier-card">
+            <div class="pilier-icon">
+              <i class="fas fa-book"></i>
             </div>
+            <h4 class="pilier-title">Discipline</h4>
+            <p class="pilier-text">L'ordre et la structure sont les fondements de notre force collective.</p>
+          </div>
         </div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-    <!-- ========== HISTOIRE ========== -->
-    <section id="histoire">
-        <div class="section-title">CHRONIQUE MILITAIRE</div>
-        <h2>Histoire du Régiment</h2>
-        <p class="histoire-intro">Depuis sa création sous l'Empire, le 82ème Régiment a forgé sa légende sur les champs de bataille d'Europe, portant haut les couleurs de la France.</p>
+  <!-- ===== HISTOIRE SECTION ===== -->
+  <section class="histoire-section" id="histoire" aria-label="Histoire du régiment">
+    <div class="container">
+      
+      <div class="section-header centered">
+        <span class="section-badge">⚜ Chronique Militaire ⚜</span>
+        <h2 class="section-title">Histoire du Régiment</h2>
+        <p class="section-subtitle">Depuis sa création sous l'Empire, le 82ème Régiment a forgé sa légende sur les champs de bataille d'Europe, portant haut les couleurs de la France.</p>
+        <div class="gold-line"></div>
+      </div>
 
-        <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1804</div>
-                    <div class="timeline-title">Création du Régiment</div>
-                    <p>Fondé par décret impérial de Napoléon Bonaparte, le 82ème Régiment d'Infanterie de Ligne est constitué à Paris. Ses premiers soldats sont recrutés parmi les meilleurs grognards de l'Empire.</p>
-                    <span class="timeline-tag">Fondation</span>
-                </div>
+      <!-- TIMELINE -->
+      <div class="timeline">
+        
+        <!-- 1804 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Fondation">
+              <i class="fas fa-crown"></i>
             </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1805</div>
-                    <div class="timeline-title">Campagne d'Austerlitz</div>
-                    <p>Le régiment participe à la célèbre bataille d'Austerlitz, l'une des plus grandes victoires de Napoléon. Ses grenadiers se distinguent par leur bravoure.</p>
-                    <span class="timeline-tag">Victoire</span>
-                </div>
+            <div class="timeline-year">1804</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Création du Régiment</h3>
+              <p class="timeline-text">
+                Fondé par décret impérial de Napoléon Bonaparte, le 82ème Régiment d'Infanterie de Ligne est constitué à Paris. Ses premiers soldats sont recrutés parmi les meilleurs grognards de l'Empire. Un moment fondateur qui marquera plusieurs décennies d'histoire militaire.
+              </p>
+              <span class="timeline-tag">Fondation</span>
             </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1812</div>
-                    <div class="timeline-title">Campagne de Russie</div>
-                    <p>Le régiment participe à la désastreuse campagne de Russie. Affrontant le froid sibérien et la Grande Armée russe, ses soldats font preuve d'un courage exemplaire.</p>
-                    <span class="timeline-tag">Épreuve</span>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1815</div>
-                    <div class="timeline-title">Waterloo et la Chute</div>
-                    <p>Le régiment combat avec acharnement aux côtés de l'Empereur à Waterloo. Malgré son courage inébranlable, il ne peut contenir la marée alliée.</p>
-                    <span class="timeline-tag">Défaite</span>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1870</div>
-                    <div class="timeline-title">Guerre Franco-Prussienne</div>
-                    <p>Le régiment s'engage lors de la Guerre de 1870 contre la Prusse. Ses grenadiers combattent avec ténacité lors de la bataille de Sedan.</p>
-                    <span class="timeline-tag">Conflit</span>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1914</div>
-                    <div class="timeline-title">Première Guerre Mondiale</div>
-                    <p>Le 82ème Régiment participe aux grandes offensives de la Grande Guerre. Leurs sacrifices contribuent à la victoire de 1918.</p>
-                    <span class="timeline-tag">Grande Guerre</span>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">1944</div>
-                    <div class="timeline-title">Débarquement et Libération</div>
-                    <p>Le régiment participe aux opérations de débarquement en Normandie. Ses soldats contribuent à la libération de la France.</p>
-                    <span class="timeline-tag">Libération</span>
-                </div>
-            </div>
-
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <div class="timeline-year">2026</div>
-                    <div class="timeline-title">Renaissance Moderne</div>
-                    <p>Le 82ème Régiment de Grenadier à Pied renaît de ses cendres dans Holdfast: Nations At War. Porteurs de sa riche histoire napoléonienne, les membres du régiment perpétuent les traditions d'excellence.</p>
-                    <span class="timeline-tag">Renouveau</span>
-                </div>
-            </div>
+          </div>
         </div>
 
-        <blockquote class="quote">
-            <p>« Un soldat du 82ème Régiment vaut cent ennemis ordinaires. Son courage est légende, sa discipline sans égale. Là où il passe, la victoire le suit. »</p>
-            <p class="quote-author">— Napoléon Bonaparte, 1806</p>
+        <!-- 1805 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Victoire">
+              <i class="fas fa-fire"></i>
+            </div>
+            <div class="timeline-year">1805</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Campagne d'Austerlitz</h3>
+              <p class="timeline-text">
+                Le régiment participe à la célèbre bataille d'Austerlitz, l'une des plus grandes victoires de Napoléon. Ses grenadiers se distinguent par leur bravoure face aux armées austro-russes. Cette victoire établit la réputation du régiment.
+              </p>
+              <span class="timeline-tag">Victoire</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1812 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Épreuve">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <div class="timeline-year">1812</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Campagne de Russie</h3>
+              <p class="timeline-text">
+                Le régiment participe à la désastreuse campagne de Russie. Affrontant le froid sibérien et la Grande Armée russe, ses soldats font preuve d'un courage exemplaire face à l'adversité extrême. Bien que réduites en nombre, ses forces survivantes conservent intacte leur honneur.
+              </p>
+              <span class="timeline-tag">Épreuve</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1815 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Waterloo">
+              <i class="fas fa-chess-king"></i>
+            </div>
+            <div class="timeline-year">1815</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Waterloo et la Chute</h3>
+              <p class="timeline-text">
+                Le régiment combat avec acharnement aux côtés de l'Empereur à Waterloo. Malgré son courage inébranlable et ses charges héroïques, il ne peut contenir la marée alliée. Cette défaite marque le début d'une nouvelle ère pour l'unité.
+              </p>
+              <span class="timeline-tag">Défaite</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1870 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Sedan">
+              <i class="fas fa-flag"></i>
+            </div>
+            <div class="timeline-year">1870</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Guerre Franco-Prussienne</h3>
+              <p class="timeline-text">
+                Le régiment s'engage lors de la Guerre de 1870 contre la Prusse. Ses grenadiers combattent avec ténacité lors de la bataille de Sedan et des opérations suivantes. Malgré la défaite française, le régiment maintient son prestige militaire.
+              </p>
+              <span class="timeline-tag">Conflit</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1914 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="WWI">
+              <i class="fas fa-bomb"></i>
+            </div>
+            <div class="timeline-year">1914</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Première Guerre Mondiale</h3>
+              <p class="timeline-text">
+                Le 82ème Régiment participe aux grandes offensives de la Grande Guerre. Des Ardennes aux Dardanelles, ses soldats connaissent l'enfer des tranchées. Leurs sacrifices contribuent à la victoire de 1918 et à la préservation de la France.
+              </p>
+              <span class="timeline-tag">Grande Guerre</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1944 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Libération">
+              <i class="fas fa-dove"></i>
+            </div>
+            <div class="timeline-year">1944</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Débarquement et Libération</h3>
+              <p class="timeline-text">
+                Le régiment participe aux opérations de débarquement en Normandie. Traversant la Manche sous le feu ennemi, il s'engage sur les plages fortifiées. Ses soldats contribuent à la libération de la France et à la défaite du nazisme.
+              </p>
+              <span class="timeline-tag">Libération</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2020 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Moderne">
+              <i class="fas fa-star"></i>
+            </div>
+            <div class="timeline-year">2020</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Renaissance Moderne</h3>
+              <p class="timeline-text">
+                Le 82ème Régiment de Grenadier à Pied renaît de ses cendres dans Holdfast: Nations At War. Porteurs de sa riche histoire napoléonienne, les membres du régiment perpétuent les traditions d'excellence, d'honneur et de camaraderie qui ont toujours caractérisé cette unité.
+              </p>
+              <span class="timeline-tag">Renouveau</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- QUOTE IMPÉRIALE -->
+      <div class="histoire-quote">
+        <blockquote>
+          "Un soldat du 82ème Régiment vaut cent ennemis ordinaires. Son courage est légende, sa discipline sans égale. Là où il passe, la victoire le suit."
         </blockquote>
-    </section>
+        <cite>— Napoléon Bonaparte, 1806</cite>
+      </div>
 
-    <!-- ========== RECRUTEMENT ========== -->
-    <section id="contact">
-        <div class="section-title">RECRUTEMENT OUVERT</div>
-        <h2>Rejoindre le 82ème Régiment</h2>
-        <p class="contact-intro">Que vous soyez militaire expérimenté ou novice passionné, le 82ème Régiment de Grenadier à Pied vous accueille dans ses rangs.</p>
+    </div>
+  </section>
 
-        <div class="recruitment-process">
-            <div class="process-step">
-                <h4>1️⃣ Candidature</h4>
-                <p>Postule à l'Officiel</p>
-            </div>
-            <div class="process-step">
-                <h4>2️⃣ Entretien</h4>
-                <p>Rencontre au Staff</p>
-            </div>
-            <div class="process-step">
-                <h4>3️⃣ Entraînement</h4>
-                <p>Formation Militaire</p>
-            </div>
-            <div class="process-step">
-                <h4>4️⃣ Engagement</h4>
-                <p>Bienvenue au Régiment</p>
-            </div>
+  <!-- ===== GRADES DU RÉGIMENT ===== -->
+  <section class="grades-section" id="grades" aria-label="Organigramme des grades du régiment">
+    <div class="container">
+      
+      <!-- HEADER -->
+      <div class="section-header centered">
+        <span class="section-badge">⚜ HIÉRARCHIE MILITAIRE ⚜</span>
+        <h2 class="section-title">Grades du Régiment</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <!-- ORGANIGRAMME PRINCIPAL -->
+      <div class="organigramme-wrapper">
+        
+        <!-- NIVEAU 1 : COMMANDEMENT GÉNÉRAL -->
+        <div class="organigramme-level level-1">
+          <div class="command-box">
+            <h3 class="command-title">COMMANDEMENT GÉNÉRAL</h3>
+            <p class="command-subtitle">ÉTAT-MAJOR DU 82<span class="superscript">E</span> RGP</p>
+          </div>
+          <div class="line-down"></div>
         </div>
 
-        <form class="recruitment-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-                <label for="name">Nom de Soldat</label>
-                <input type="text" id="name" name="name" required>
+        <!-- NIVEAU 2 : TROIS CORPS -->
+        <div class="organigramme-level level-2">
+          
+          <!-- CORPS 1 : ARTILLERIE ET GRENADIERS -->
+          <div class="corps-column">
+            <div class="line-up"></div>
+            <div class="grade-box corps-1">
+              <div class="grade-header">
+                <span class="grade-number">1<span class="superscript">ER</span></span>
+                <h4 class="grade-corps-title">CORPS</h4>
+              </div>
+              <p class="grade-motto">« Le feu qui libère ! »</p>
+              
+              <div class="sous-grades-list">
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Général d'Artillerie</span>
+                  <p class="sous-grade-desc">Chef de Corps</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Colonel</span>
+                  <p class="sous-grade-desc">Chef de Batterie</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Sergent-Chef</span>
+                  <p class="sous-grade-desc">Chef de Section</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Canonnier</span>
+                  <p class="sous-grade-desc">Servant de Pièce</p>
+                </div>
+              </div>
+
+              <div class="corps-description">
+                <h5><i class="fas fa-cannon"></i> Artillerie & Grenadiers</h5>
+                <p>Maîtrise du feu et puissance offensive du régiment</p>
+              </div>
             </div>
+          </div>
 
-            <div class="form-group">
-                <label for="discord">Discord ID</label>
-                <input type="text" id="discord" name="discord" required>
+          <!-- CORPS 2 : INFANTERIE ET VOLTIGEURS -->
+          <div class="corps-column">
+            <div class="line-up"></div>
+            <div class="grade-box corps-2">
+              <div class="grade-header">
+                <span class="grade-number">2<span class="superscript">ÈME</span></span>
+                <h4 class="grade-corps-title">CORPS</h4>
+              </div>
+              <p class="grade-motto">« En avant pour la Patrie ! »</p>
+              
+              <div class="sous-grades-list">
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Maréchal d'Empire</span>
+                  <p class="sous-grade-desc">Chef Suprême du Régiment</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Colonel</span>
+                  <p class="sous-grade-desc">Chef de Régiment</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Marie Louise</span>
+                  <p class="sous-grade-desc">Soldat du Rang</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Voltigeur</span>
+                  <p class="sous-grade-desc">Combattant Élite</p>
+                </div>
+              </div>
+
+              <div class="corps-description">
+                <h5><i class="fas fa-person-rifle"></i> Infanterie & Voltigeurs</h5>
+                <p>L'épine dorsale du régiment, flexibilité et adaptabilité</p>
+              </div>
             </div>
+          </div>
 
-            <div class="form-group">
-                <label for="experience">Expérience Militaire</label>
-                <select id="experience" name="experience" required>
-                    <option value="">-- Sélectionne --</option>
-                    <option value="novice">Novice</option>
-                    <option value="intermediaire">Intermédiaire</option>
-                    <option value="confirme">Confirmé</option>
-                    <option value="expert">Expert</option>
-                </select>
+          <!-- CORPS 3 : GARDE ET CAVALERIE -->
+          <div class="corps-column">
+            <div class="line-up"></div>
+            <div class="grade-box corps-3">
+              <div class="grade-header">
+                <span class="grade-number">3<span class="superscript">ÈME</span></span>
+                <h4 class="grade-corps-title">CORPS</h4>
+              </div>
+              <p class="grade-motto">« La Garde meurt mais ne se rend pas ! »</p>
+              
+              <div class="sous-grades-list">
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Général de Cavalerie</span>
+                  <p class="sous-grade-desc">Commandant Suprême</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Colonel</span>
+                  <p class="sous-grade-desc">Chef de Régiment</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Capitaine</span>
+                  <p class="sous-grade-desc">Chef d'Escadron</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Cavalier</span>
+                  <p class="sous-grade-desc">Guerrier Monté</p>
+                </div>
+              </div>
+
+              <div class="corps-description">
+                <h5><i class="fas fa-horse"></i> Garde & Cavalerie</h5>
+                <p>L'élite du régiment, mobilité et puissance de choc</p>
+              </div>
             </div>
+          </div>
 
-            <div class="form-group">
-                <label for="motivation">Motivation</label>
-                <textarea id="motivation" name="motivation" required></textarea>
-            </div>
+        </div>
 
-            <button type="submit" class="submit-btn">Soumettre Candidature</button>
-        </form>
-    </section>
+      </div>
 
-    <!-- ========== FOOTER ========== -->
-    <footer>
-        <p>© 2026 82ème Régiment de Grenadier à Pied</p>
-        <p>Tous droits réservés</p>
-        <p class="footer-motto">Honneur • Courage • Discipline</p>
-    </footer>
+      <!-- RECRUTEMENT -->
+      <div class="recrutement-section">
+        <h3 class="recrutement-title"><i class="fas fa-sign-in-alt"></i> Recrutement Ouvert</h3>
+        <p class="recrutement-desc">Que vous soyez militaire expérimenté ou novice passionné, le 82ème Régiment de Grenadier à Pied vous accueille dans ses rangs.</p>
+        
+        <div class="recrutement-steps">
+          <div class="step">
+            <div class="step-number"><i class="fas fa-pen"></i></div>
+            <h4 class="step-title">Candidature</h4>
+            <p class="step-desc">Postule à l'Officiel</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number"><i class="fas fa-handshake"></i></div>
+            <h4 class="step-title">Entretien</h4>
+            <p class="step-desc">Rencontre au Staff</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number"><i class="fas fa-dumbbell"></i></div>
+            <h4 class="step-title">Intégration</h4>
+            <p class="step-desc">Entraînement Militaire</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number"><i class="fas fa-medal"></i></div>
+            <h4 class="step-title">Engagement</h4>
+            <p class="step-desc">Bienvenue au Régiment</p>
+          </div>
+        </div>
+      </div>
 
-    <script src="script.js"></script>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 82ème Régiment de Grenadier à Pied - Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
