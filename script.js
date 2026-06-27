@@ -3,13 +3,13 @@ const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
-  navLinks.classList.toggle('open');
+  navLinks.classList.toggle('active');
 });
 
-// Fermer le menu quand on clique sur un lien
+// Fermer le menu en cliquant sur un lien
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
-    navLinks.classList.remove('open');
+    navLinks.classList.remove('active');
   });
 });
 
