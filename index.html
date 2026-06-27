@@ -3,150 +3,407 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>82ème GRP - Grande Régiment Protecteur</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <meta name="description" content="82ème GRP - Régiment français sur Holdfast: Nations At War. Recrutement ouvert, communauté militaire, formations régulières.">
+  <meta name="theme-color" content="#C9A84C">
+  <title>82ème GRP - Holdfast Nations At War</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="navbar-left">🇫🇷 82ème GRP</div>
-    <div class="navbar-center">
-      <a href="#hero">Accueil</a>
-      <a href="#piliers">Piliers</a>
-      <a href="#apropos">À Propos</a>
-      <a href="#contact">Contact</a>
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="nav-container">
+      <a href="#accueil" class="nav-logo" aria-label="82ème GRP - Retour à l'accueil">
+        <span>82<span class="superscript">ème</span> GRP</span>
+      </a>
+      
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#histoire">Histoire</a></li>
+        <li><a href="#piliers">Le Régiment</a></li>
+        <li><a href="#recrutement">Rejoindre</a></li>
+      </ul>
+      
+      <a href="https://discord.gg/dYntFu9KgY" class="btn-discord" target="_blank" rel="noopener noreferrer" aria-label="Discord du 82ème GRP (nouvel onglet)">
+        Discord
+      </a>
+      
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu de navigation">
+        ☰
+      </button>
     </div>
-    <div class="navbar-right">DISCORD</div>
   </nav>
 
-  <!-- HERO SECTION -->
-  <section class="hero" id="hero">
+  <!-- ===== HERO ===== -->
+  <section id="accueil" class="hero" aria-label="Section d'accueil principale">
+    <div class="hero-overlay"></div>
     <div class="hero-content">
-      <h2>Bienvenue dans le</h2>
-      <h1>82ème</h1>
-      <h3>Grande Régiment Protecteur</h3>
-      <p>"L'honneur, le courage et la discipline"</p>
-      <button class="btn">Rejoindre nos rangs</button>
-    </div>
-  </section>
-
-  <!-- PILIERS SECTION -->
-  <section class="piliers-section" id="piliers">
-    <h2 class="piliers-title">Les 4 Piliers</h2>
-    <div class="piliers-underline"></div>
-    <p class="piliers-subtitle">Les valeurs fondamentales de notre régiment</p>
-
-    <div class="piliers-grid">
-      <div class="pilier-card">
-        <div class="pilier-icon">⚔️</div>
-        <h3>Honneur</h3>
-        <p>Nous honorons nos traditions et défendons nos valeurs avec fierté et respect.</p>
+      <div class="hero-badge">⚜️ Holdfast: Nations At War ⚜️</div>
+      
+      <h1 class="hero-title">
+        <span class="hero-number">82<span class="superscript">ème</span></span>
+        <span class="hero-name">Regiment de <br> Grenadier a Pied</span>
+      </h1>
+      
+      <p class="hero-quote">« L'honneur ne se rend pas, il se conquiert. »</p>
+      
+      <div class="hero-stats" role="region" aria-label="Statistiques du régiment">
+        <div class="stat">
+          <span class="stat-number">50+</span>
+          <span class="stat-label">Membres</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat">
+          <span class="stat-number">Actif</span>
+          <span class="stat-label">Statut</span>
+        </div>
+        <div class="stat-divider" aria-hidden="true">|</div>
+        <div class="stat">
+          <span class="stat-number">FR</span>
+          <span class="stat-label">Régiment</span>
+        </div>
       </div>
-
-      <div class="pilier-card">
-        <div class="pilier-icon">🦁</div>
-        <h3>Courage</h3>
-        <p>Nous affrontons les défis avec détermination et bravoure sans jamais reculer.</p>
-      </div>
-
-      <div class="pilier-card">
-        <div class="pilier-icon">🛡️</div>
-        <h3>Discipline</h3>
-        <p>Nous respectons l'ordre et la structure de notre régiment avec intégrité.</p>
-      </div>
-
-      <div class="pilier-card">
-        <div class="pilier-icon">👑</div>
-        <h3>Excellence</h3>
-        <p>Nous visons la perfection dans chaque action et chaque décision.</p>
+      
+      <div class="hero-buttons">
+        <a href="https://discord.gg/dYntFu9KgY" class="btn-primary" target="_blank" rel="noopener noreferrer">
+          Rejoindre le Discord
+        </a>
+        <a href="#histoire" class="btn-secondary">
+          Notre Histoire
+        </a>
       </div>
     </div>
+    
+    <div class="hero-scroll" aria-hidden="true">↓</div>
   </section>
 
-  <!-- ABOUT SECTION -->
-  <section class="about-section" id="apropos">
-    <div class="about-content">
-      <h2>À Propos du 82ème</h2>
-      <p>Le 82ème Grande Régiment Protecteur est une unité d'élite fondée sur les principes de l'honneur, du courage et de la discipline. Avec une longue histoire de service, nous continuons à protéger et à servir avec intégrité.</p>
-      <p>Nos soldats sont entraînés aux plus hauts standards militaires. Nous cherchons des individus motivés et passionnés à rejoindre nos rangs pour continuer notre mission de protection et de service.</p>
-    </div>
-    <div class="about-image">🎖️</div>
-  </section>
-
-  <!-- CONTACT SECTION -->
-  <section class="contact-section" id="contact">
-    <h2>Nous Contacter</h2>
-    <div class="contact-grid">
-      <div class="contact-card">
-        <h3>Discord</h3>
-        <p>Rejoignez notre serveur Discord pour discuter avec nos membres.</p>
-        <a href="#" class="contact-btn">Rejoindre</a>
+  <!-- ===== VALEURS / PILIERS ===== -->
+  <section id="piliers" class="piliers-section" aria-label="Nos valeurs fondamentales">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-sub">Ce qui nous définit</p>
+        <h2>Nos Valeurs</h2>
+        <div class="divider" aria-hidden="true"><span>⚜️</span></div>
       </div>
-
-      <div class="contact-card">
-        <h3>Email</h3>
-        <p>Contactez-nous par email pour toute demande de renseignement.</p>
-        <a href="mailto:contact@82grp.fr" class="contact-btn">Envoyer</a>
-      </div>
-
-      <div class="contact-card">
-        <h3>Recrutement</h3>
-        <p>Intéressé par rejoindre le régiment ? Consultez nos offres.</p>
-        <a href="#" class="contact-btn">Candidater</a>
+      
+      <div class="piliers-grid" role="region" aria-label="Cartes des trois valeurs principales">
+        <div class="pilier-card">
+          <div class="pilier-icon" aria-hidden="true">⚔️</div>
+          <h3>Honneur</h3>
+          <p>Chaque soldat du 82ème GRP porte fièrement les couleurs du régiment. L'honneur est notre boussole, sur le champ de bataille comme en dehors.</p>
+        </div>
+        
+        <div class="pilier-card featured">
+          <div class="pilier-icon" aria-hidden="true">🎖️</div>
+          <h3>Discipline</h3>
+          <p>La rigueur militaire est au cœur de notre fonctionnement. Formations, ordres de bataille et hiérarchie sont respectés avec le plus grand sérieux.</p>
+        </div>
+        
+        <div class="pilier-card">
+          <div class="pilier-icon" aria-hidden="true">🤝</div>
+          <h3>Camaraderie</h3>
+          <p>Le 82ème GRP est avant tout une famille. Solidarité, entraide et bonne humeur sont les piliers de notre communauté soudée.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-section">
-        <h4>Navigation</h4>
-        <ul>
-          <li><a href="#hero">Accueil</a></li>
-          <li><a href="#piliers">Piliers</a></li>
-          <li><a href="#apropos">À Propos</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h4>Régiment</h4>
-        <ul>
-          <li><a href="#">Histoire</a></li>
-          <li><a href="#">Structure</a></li>
-          <li><a href="#">Traditions</a></li>
-          <li><a href="#">Galerie</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h4>Ressources</h4>
-        <ul>
-          <li><a href="#">Candidature</a></li>
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Formations</a></li>
-          <li><a href="#">Support</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-section">
-        <h4>Nous Suivre</h4>
-        <ul>
-          <li><a href="#">Discord</a></li>
-          <li><a href="#">Twitter</a></li>
-          <li><a href="#">YouTube</a></li>
-          <li><a href="#">Twitch</a></li>
-        </ul>
+  <!-- ===== QUI SOMMES-NOUS ===== -->
+  <section class="about-section" aria-label="Présentation du régiment">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-img-frame">
+            <div class="img-placeholder" aria-hidden="true">⚔️<br>82ème GRP<br>En Formation</div>
+          </div>
+        </div>
+        
+        <div class="about-text">
+          <p class="section-sub">Notre identité</p>
+          <h2>Qui sommes-nous ?</h2>
+          <div class="divider left" aria-hidden="true"><span>⚜️</span></div>
+          
+          <p>Le <strong>82ème Groupe de Reconnaissance et de Projection</strong> est un régiment français sur <strong>Holdfast: Nations At War</strong>. Fondé par des passionnés d'histoire militaire napoléonienne.</p>
+          
+          <p>Structuré en unités spécialisées — Infanterie, Voltigeurs, Artillerie et Cavalerie — le régiment offre un cadre compétitif et accueillant.</p>
+          
+          <div class="about-features" role="list" aria-label="Caractéristiques du régiment">
+            <div class="feature" role="listitem">✅ Linebattles hebdomadaires</div>
+            <div class="feature" role="listitem">✅ Entraînements réguliers</div>
+            <div class="feature" role="listitem">✅ Communauté francophone</div>
+            <div class="feature" role="listitem">✅ Hiérarchie structurée</div>
+          </div>
+          
+          <a href="#recrutement" class="btn-primary">Nous rejoindre</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <div class="footer-bottom">
-      <p>&copy; 2026 82ème GRP - Grande Régiment Protecteur | Tous droits réservés</p>
+ <!-- ===== HISTOIRE ===== -->
+<section class="histoire-section" id="histoire">
+  <div class="container">
+    
+    <div class="section-header centered">
+      <span class="section-badge">⚜ Chronique Militaire ⚜</span>
+      <h2 class="section-title">Histoire du Régiment</h2>
+      <div class="gold-line"></div>
+      <p class="section-subtitle">
+        Depuis sa création sous l'Empire, le 82ème Groupe a forgé sa légende 
+        sur les champs de bataille d'Europe, portant haut les couleurs de la France.
+      </p>
+    </div>
+
+    <div class="timeline" role="region" aria-label="Frise chronologique du régiment">
+
+      <!-- ÉVÉNEMENT 1 - GAUCHE -->
+      <div class="timeline-item left">
+        <div class="timeline-card">
+          <span class="timeline-date">1804</span>
+          <h3 class="timeline-title">Création du Régiment</h3>
+          <p class="timeline-text">
+            Fondé par décret impérial de Napoléon Bonaparte, le 82ème Régiment 
+            d'Infanterie de Ligne est constitué à Paris. Ses premiers soldats 
+            sont recrutés parmi les meilleurs grognards de l'Empire.
+          </p>
+          <span class="timeline-tag">🏛 Fondation</span>
+        </div>
+        <div class="timeline-dot">⚜</div>
+      </div>
+
+      <!-- ÉVÉNEMENT 2 - DROIT -->
+      <div class="timeline-item right">
+        <div class="timeline-dot">⚔</div>
+        <div class="timeline-card">
+          <span class="timeline-date">1805</span>
+          <h3 class="timeline-title">Campagne d'Austerlitz</h3>
+          <p class="timeline-text">
+            Le régiment participe à la Grande Armée lors de la campagne d'Allemagne. 
+            À Austerlitz, le 82ème se distingue par une charge décisive sur le flanc 
+            ennemi, recevant les éloges de l'Empereur en personne.
+          </p>
+          <span class="timeline-tag">⚔ Victoire</span>
+        </div>
+      </div>
+
+      <!-- ÉVÉNEMENT 3 - GAUCHE -->
+      <div class="timeline-item left">
+        <div class="timeline-card">
+          <span class="timeline-date">1807</span>
+          <h3 class="timeline-title">Bataille de Friedland</h3>
+          <p class="timeline-text">
+            Engagé sur le front de Prusse, le 82ème contribue à la victoire 
+            écrasante contre les forces russes. L'Aigle du régiment est décoré 
+            d'une couronne de laurier impérial après la bataille.
+          </p>
+          <span class="timeline-tag">🦅 Distinction</span>
+        </div>
+        <div class="timeline-dot">🦅</div>
+      </div>
+
+      <!-- ÉVÉNEMENT 4 - DROIT -->
+      <div class="timeline-item right">
+        <div class="timeline-dot">🌊</div>
+        <div class="timeline-card">
+          <span class="timeline-date">1808</span>
+          <h3 class="timeline-title">Campagne d'Espagne</h3>
+          <p class="timeline-text">
+            Déployé sur la péninsule ibérique, le régiment affronte la guérilla 
+            espagnole dans des conditions éprouvantes. Malgré les pertes, 
+            la discipline et la cohésion du 82ème restent exemplaires.
+          </p>
+          <span class="timeline-tag">🌊 Campagne</span>
+        </div>
+      </div>
+
+      <!-- ÉVÉNEMENT 5 - GAUCHE -->
+      <div class="timeline-item left">
+        <div class="timeline-card">
+          <span class="timeline-date">1812</span>
+          <h3 class="timeline-title">La Retraite de Russie</h3>
+          <p class="timeline-text">
+            Parmi les survivants de la campagne de Russie, les hommes du 82ème 
+            témoignent d'un courage inébranlable. Malgré des pertes considérables, 
+            le régiment maintient sa formation jusqu'au passage de la Bérézina.
+          </p>
+          <span class="timeline-tag">❄ Épreuve</span>
+        </div>
+        <div class="timeline-dot">❄</div>
+      </div>
+
+      <!-- ÉVÉNEMENT 6 - DROIT -->
+      <div class="timeline-item right">
+        <div class="timeline-dot">🌹</div>
+        <div class="timeline-card">
+          <span class="timeline-date">1815</span>
+          <h3 class="timeline-title">Les Cent-Jours & Waterloo</h3>
+          <p class="timeline-text">
+            Rallié à Napoléon lors des Cent-Jours, le 82ème combat vaillamment 
+            à Waterloo. La défaite marque la fin de l'Empire, mais la gloire 
+            du régiment reste gravée dans les annales militaires françaises.
+          </p>
+          <span class="timeline-tag">🌹 Mémoire</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+    <!-- FIN TIMELINE -->
+
+    <!-- ===== CITATION FINALE ===== -->
+    <div class="histoire-quote" role="region" aria-label="Citation historique">
+      <div class="quote-icon" aria-hidden="true">❝</div>
+      <blockquote lang="fr">
+        Ces hommes n'ont pas seulement servi la France, 
+        ils ont incarné l'âme même de la Grande Armée.
+      </blockquote>
+      <cite>— Napoléon Bonaparte, Bulletin de la Grande Armée</cite>
+    </div>
+
+  </div>
+</section>
+
+      <!-- ===== TRAILER/VIDÉO ===== -->
+      <section class="trailer-section" id="trailer" aria-label="Vidéo de présentation du régiment">
+        <div class="section-header">
+          <span class="section-badge">🎬 Cinématique Officielle 🎬</span>
+          <h2 class="section-title">Trailer du Régiment</h2>
+          <div class="gold-line" aria-hidden="true"></div>
+          <p class="section-subtitle">
+            Découvrez la puissance et la gloire du 82ème Groupe en action, 
+            sur les champs de bataille de Holdfast.
+          </p>
+        </div>
+
+        <div class="trailer-wrapper">
+          <div class="trailer-frame">
+            <iframe
+              src="https://www.youtube.com/embed/Ug47vZNtIdI"
+              title="Trailer du 82ème GRP - Holdfast Nations At War"
+              width="100%"
+              height="500"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+              loading="lazy">
+            </iframe>
+          </div>
+
+          <div class="trailer-deco trailer-deco-left" aria-hidden="true">⚜</div>
+          <div class="trailer-deco trailer-deco-right" aria-hidden="true">⚜</div>
+        </div>
+
+        <div class="trailer-info" role="list" aria-label="Informations vidéo">
+          <div class="trailer-info-card" role="listitem">
+            <span class="info-icon" aria-hidden="true">⚔</span>
+            <span class="info-text">Combats en Ligne</span>
+          </div>
+          <div class="trailer-info-card" role="listitem">
+            <span class="info-icon" aria-hidden="true">🦅</span>
+            <span class="info-text">Gloire Impériale</span>
+          </div>
+          <div class="trailer-info-card" role="listitem">
+            <span class="info-icon" aria-hidden="true">🥁</span>
+            <span class="info-text">Holdfast Nations</span>
+          </div>
+          <div class="trailer-info-card" role="listitem">
+            <span class="info-icon" aria-hidden="true">🏆</span>
+            <span class="info-text">82ème Régiment</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== CITATION ===== -->
+      <div class="histoire-quote" role="region" aria-label="Citation historique">
+        <div class="quote-icon" aria-hidden="true">❝</div>
+        <blockquote lang="fr">
+          Ces hommes n'ont pas seulement servi la France, 
+          ils ont incarné l'âme même de la Grande Armée.
+        </blockquote>
+        <cite>— Napoléon Bonaparte, Bulletin de la Grande Armée</cite>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== RECRUTEMENT ===== -->
+  <section id="recrutement" class="recrutement-section" aria-label="Section de recrutement">
+    <div class="container">
+      <div class="recrutement-content">
+        <div class="section-header">
+          <p class="section-sub">Rejoignez-nous</p>
+          <h2>Recrutement Ouvert</h2>
+          <div class="divider" aria-hidden="true"><span>⚜️</span></div>
+        </div>
+        
+        <p class="recrutement-text">Que vous soyez vétéran ou nouvelle recrue, le 82ème GRP vous accueille dans ses rangs.</p>
+        
+        <div class="recrutement-steps" role="list" aria-label="Étapes de recrutement">
+          <div class="step" role="listitem">
+            <div class="step-number">1</div>
+            <p>Rejoindre le Discord</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step" role="listitem">
+            <div class="step-number">2</div>
+            <p>Ouvrir un ticket</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step" role="listitem">
+            <div class="step-number">3</div>
+            <p>Passer l'entretien</p>
+          </div>
+          <div class="step-arrow" aria-hidden="true">→</div>
+          <div class="step" role="listitem">
+            <div class="step-number">4</div>
+            <p>Bienvenue soldat !</p>
+          </div>
+        </div>
+        
+        <a href="https://discord.gg/dYntFu9KgY" class="btn-primary large" target="_blank" rel="noopener noreferrer">
+          Rejoindre le Discord
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer" role="contentinfo" aria-label="Pied de page du site">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>82<span class="superscript">ème</span> GRP</h3>
+          <p>Régiment français sur<br>Holdfast: Nations At War</p>
+          <p class="footer-quote">« L'honneur ne se rend pas,<br>il se conquiert. »</p>
+        </div>
+        
+        <nav class="footer-links" aria-label="Navigation du footer">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#histoire">Histoire</a></li>
+            <li><a href="#piliers">Le Régiment</a></li>
+            <li><a href="#recrutement">Rejoindre</a></li>
+          </ul>
+        </nav>
+        
+        <div class="footer-social">
+          <h4>Nous rejoindre</h4>
+          <a href="https://discord.gg/dYntFu9KgY" class="footer-discord" target="_blank" rel="noopener noreferrer" aria-label="Discord du régiment (nouvel onglet)">
+            Discord du Régiment
+          </a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 82ème GRP — Tous droits réservés</p>
+      </div>
     </div>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
