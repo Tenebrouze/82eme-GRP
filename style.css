@@ -1444,3 +1444,426 @@ body {
   }
 
   .histoire
+
+  /* ===== GRADES SECTION ===== */
+.grades-section {
+  padding: 120px 0;
+  background: linear-gradient(180deg, rgba(13, 31, 60, 0.4) 0%, transparent 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.grades-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(201, 168, 76, 0.3), transparent);
+}
+
+.grades-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 40px auto 60px;
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.grades-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  margin-bottom: 80px;
+}
+
+/* ===== CATÉGORIES ===== */
+.grades-category {
+  position: relative;
+}
+
+.category-header {
+  margin-bottom: 40px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid rgba(201, 168, 76, 0.2);
+}
+
+.category-title {
+  font-family: 'Cinzel', serif;
+  font-size: 2rem;
+  color: var(--gold);
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.category-subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  font-style: italic;
+}
+
+.grades-list {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* ===== GRADE CARDS ===== */
+.grade-card {
+  border: 2px solid rgba(201, 168, 76, 0.25);
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.5) 0%, rgba(13, 31, 60, 0.3) 100%);
+  border-radius: 5px;
+  padding: 30px;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+.grade-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.grade-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at top right, rgba(201, 168, 76, 0.1), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+  pointer-events: none;
+}
+
+.grade-card:hover {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.8) 0%, rgba(13, 31, 60, 0.6) 100%);
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(201, 168, 76, 0.2);
+}
+
+.grade-card:hover::before {
+  opacity: 1;
+}
+
+.grade-card:hover::after {
+  opacity: 1;
+}
+
+/* MARÉCHAL D'EMPIRE - FEATURED */
+.grade-card.featured-grade {
+  border-color: var(--gold);
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.15) 0%, rgba(201, 168, 76, 0.08) 100%);
+  transform: scale(1.02);
+  box-shadow: 0 0 30px rgba(201, 168, 76, 0.2), inset 0 0 30px rgba(201, 168, 76, 0.05);
+}
+
+.grade-card.featured-grade:hover {
+  transform: scale(1.05) translateY(-12px);
+  box-shadow: 0 0 50px rgba(201, 168, 76, 0.3), inset 0 0 30px rgba(201, 168, 76, 0.1);
+}
+
+.grade-card.featured-grade .grade-rank {
+  font-size: 1.4rem;
+}
+
+/* ===== GRADE HEADER ===== */
+.grade-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid rgba(201, 168, 76, 0.15);
+  transition: all 0.3s ease;
+}
+
+.grade-header.featured {
+  border-bottom: 2px solid rgba(201, 168, 76, 0.4);
+}
+
+.grade-rank {
+  font-family: 'Cinzel', serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--gold);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.grade-icon {
+  font-size: 2rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== GRADE BODY ===== */
+.grade-body {
+  position: relative;
+  z-index: 2;
+}
+
+.grade-description {
+  color: var(--text);
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin-bottom: 20px;
+}
+
+.grade-description strong {
+  color: var(--gold-light);
+}
+
+.grade-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.detail-badge {
+  display: inline-block;
+  background: rgba(201, 168, 76, 0.1);
+  border: 1px solid rgba(201, 168, 76, 0.3);
+  color: var(--gold);
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.grade-card:hover .detail-badge {
+  background: rgba(201, 168, 76, 0.2);
+  border-color: var(--gold);
+}
+
+/* LEADER INFO (MARÉCHAL) */
+.leader-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.leader-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.2), rgba(201, 168, 76, 0.1));
+  border: 2px solid rgba(201, 168, 76, 0.4);
+  color: var(--gold-light);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.grade-card.featured-grade:hover .leader-badge {
+  background: linear-gradient(135deg, rgba(201, 168, 76, 0.3), rgba(201, 168, 76, 0.2));
+  border-color: var(--gold);
+  box-shadow: 0 0 15px rgba(201, 168, 76, 0.2);
+}
+
+.grade-responsibilities {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  padding-top: 15px;
+  border-top: 1px solid rgba(201, 168, 76, 0.1);
+  margin-top: 15px;
+}
+
+.grade-responsibilities strong {
+  color: var(--gold);
+}
+
+/* ===== GRADES QUOTE ===== */
+.grades-quote {
+  background: linear-gradient(135deg, rgba(10, 22, 40, 0.7), rgba(13, 31, 60, 0.5));
+  border: 2px solid rgba(201, 168, 76, 0.3);
+  border-radius: 5px;
+  padding: 50px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-top: 40px;
+}
+
+.grades-quote::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.grades-quote .quote-icon {
+  font-size: 3rem;
+  color: var(--gold);
+  opacity: 0.5;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.grades-quote blockquote {
+  font-family: 'Lora', serif;
+  font-size: 1.5rem;
+  color: var(--text);
+  font-style: italic;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.grades-quote cite {
+  color: var(--gold);
+  font-style: normal;
+  font-size: 0.95rem;
+  display: block;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .grades-grid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .category-title {
+    font-size: 1.8rem;
+  }
+
+  .grade-rank {
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .grades-section {
+    padding: 80px 0;
+  }
+
+  .grades-intro {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .grades-grid {
+    gap: 40px;
+  }
+
+  .category-title {
+    font-size: 1.5rem;
+  }
+
+  .grade-card {
+    padding: 25px;
+  }
+
+  .grade-icon {
+    font-size: 1.8rem;
+  }
+
+  .grade-description {
+    font-size: 0.9rem;
+  }
+
+  .grades-quote {
+    padding: 35px 25px;
+  }
+
+  .grades-quote blockquote {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grades-section {
+    padding: 60px 0;
+  }
+
+  .grades-grid {
+    gap: 30px;
+  }
+
+  .category-header {
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+  }
+
+  .category-title {
+    font-size: 1.3rem;
+  }
+
+  .grades-list {
+    gap: 20px;
+  }
+
+  .grade-card {
+    padding: 20px;
+  }
+
+  .grade-card.featured-grade {
+    transform: scale(1);
+  }
+
+  .grade-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .grade-icon {
+    font-size: 1.5rem;
+  }
+
+  .grade-rank {
+    font-size: 1rem;
+  }
+
+  .leader-info {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .leader-badge {
+    width: 100%;
+    text-align: center;
+  }
+
+  .grade-details {
+    gap: 10px;
+  }
+
+  .detail-badge {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
+
+  .grades-quote {
+    padding: 25px 20px;
+  }
+
+  .grades-quote blockquote {
+    font-size: 1.2rem;
+  }
+
+  .grades-quote cite {
+    font-size: 0.85rem;
+  }
+}
+
