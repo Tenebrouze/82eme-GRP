@@ -3,571 +3,379 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="82ème GRP - Régiment français sur Holdfast: Nations At War. Recrutement ouvert, communauté militaire, formations régulières.">
-  <meta name="theme-color" content="#C9A84C">
-  <title>82ème GRP - Holdfast Nations At War</title>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;900&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <title>82ème GRP - Grande Régiment Protecteur</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <!-- ===== NAVBAR ===== -->
-  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
-    <div class="nav-container">
-      <a href="#accueil" class="nav-logo" aria-label="82ème GRP - Retour à l'accueil">
-        <span>82<span class="superscript">ème</span> GRP</span>
-      </a>
-      
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#histoire">Histoire</a></li>
-        <li><a href="#piliers">Le Régiment</a></li>
-        <li><a href="#recrutement">Rejoindre</a></li>
-      </ul>
-      
-      <a href="https://discord.gg/dYntFu9KgY" class="btn-discord" target="_blank" rel="noopener noreferrer" aria-label="Discord du 82ème GRP (nouvel onglet)">
-        Discord
-      </a>
-      
-      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu de navigation">
-        ☰
-      </button>
+  <nav class="navbar" id="navbar">
+    <div class="nav-container container">
+      <div class="nav-logo">
+        <span class="logo-text">82<span class="superscript">E</span> GRP</span>
+      </div>
+      <div class="nav-links">
+        <a href="#hero" class="nav-link">Accueil</a>
+        <a href="#about" class="nav-link">À Propos</a>
+        <a href="#histoire" class="nav-link">Histoire</a>
+        <a href="#grades" class="nav-link">Grades</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
     </div>
   </nav>
 
-  <!-- ===== HERO ===== -->
-  <section id="accueil" class="hero" aria-label="Section d'accueil principale">
-    <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <div class="hero-badge">⚜️ Holdfast: Nations At War ⚜️</div>
-      
-      <h1 class="hero-title">
-        <span class="hero-number">82<span class="superscript">ème</span></span>
-        <span class="hero-name">Regiment de <br> Grenadier a Pied</span>
-      </h1>
-      
-      <p class="hero-quote">« L'honneur ne se rend pas, il se conquiert. »</p>
-      
-      <div class="hero-stats" role="region" aria-label="Statistiques du régiment">
-        <div class="stat">
-          <span class="stat-number">50+</span>
-          <span class="stat-label">Membres</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true">|</div>
-        <div class="stat">
-          <span class="stat-number">Actif</span>
-          <span class="stat-label">Statut</span>
-        </div>
-        <div class="stat-divider" aria-hidden="true">|</div>
-        <div class="stat">
-          <span class="stat-number">FR</span>
-          <span class="stat-label">Régiment</span>
-        </div>
-      </div>
-      
-      <div class="hero-buttons">
-        <a href="https://discord.gg/dYntFu9KgY" class="btn-primary" target="_blank" rel="noopener noreferrer">
-          Rejoindre le Discord
-        </a>
-        <a href="#histoire" class="btn-secondary">
-          Notre Histoire
-        </a>
-      </div>
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <div class="hero-background">
+      <div class="hero-overlay"></div>
     </div>
-    
-    <div class="hero-scroll" aria-hidden="true">↓</div>
-  </section>
-
-  <!-- ===== VALEURS / PILIERS ===== -->
-  <section id="piliers" class="piliers-section" aria-label="Nos valeurs fondamentales">
-    <div class="container">
-      <div class="section-header">
-        <p class="section-sub">Ce qui nous définit</p>
-        <h2>Nos Valeurs</h2>
-        <div class="divider" aria-hidden="true"><span>⚜️</span></div>
-      </div>
-      
-      <div class="piliers-grid" role="region" aria-label="Cartes des trois valeurs principales">
-        <div class="pilier-card">
-          <div class="pilier-icon" aria-hidden="true">⚔️</div>
-          <h3>Honneur</h3>
-          <p>Chaque soldat du 82ème GRP porte fièrement les couleurs du régiment. L'honneur est notre boussole, sur le champ de bataille comme en dehors.</p>
-        </div>
-        
-        <div class="pilier-card featured">
-          <div class="pilier-icon" aria-hidden="true">🎖️</div>
-          <h3>Discipline</h3>
-          <p>La rigueur militaire est au cœur de notre fonctionnement. Formations, ordres de bataille et hiérarchie sont respectés avec le plus grand sérieux.</p>
-        </div>
-        
-        <div class="pilier-card">
-          <div class="pilier-icon" aria-hidden="true">🤝</div>
-          <h3>Camaraderie</h3>
-          <p>Le 82ème GRP est avant tout une famille. Solidarité, entraide et bonne humeur sont les piliers de notre communauté soudée.</p>
-        </div>
-      </div>
+    <div class="hero-content container">
+      <h1 class="hero-title">82<span class="superscript">E</span> GRP</h1>
+      <p class="hero-subtitle">Grand Régiment Protecteur</p>
+      <p class="hero-tagline">Honneur • Courage • Discipline</p>
+      <a href="#about" class="hero-btn">Découvrir</a>
+    </div>
+    <div class="hero-scroll">
+      <span>Défiler</span>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+        <path d="M12 5v14M19 12l-7 7-7-7"></path>
+      </svg>
     </div>
   </section>
 
-  <!-- ===== QUI SOMMES-NOUS ===== -->
-  <section class="about-section" aria-label="Présentation du régiment">
+  <!-- ===== ABOUT SECTION ===== -->
+  <section class="about-section" id="about">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <div class="about-img-frame">
-            <div class="img-placeholder" aria-hidden="true">⚔️<br>82ème GRP<br>En Formation</div>
-          </div>
-        </div>
-        
+      <div class="section-header centered">
+        <span class="section-badge">⚜ QUI SOMMES-NOUS ⚜</span>
+        <h2 class="section-title">Le 82<span class="superscript">E</span> Groupe Régimentaire</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <div class="about-content">
         <div class="about-text">
-          <p class="section-sub">Notre identité</p>
-          <h2>Qui sommes-nous ?</h2>
-          <div class="divider left" aria-hidden="true"><span>⚜️</span></div>
-          
-          <p>Le <strong>82ème Groupe de Reconnaissance et de Projection</strong> est un régiment français sur <strong>Holdfast: Nations At War</strong>. Fondé par des passionnés d'histoire militaire napoléonienne.</p>
-          
-          <p>Structuré en unités spécialisées — Infanterie, Voltigeurs, Artillerie et Cavalerie — le régiment offre un cadre compétitif et accueillant.</p>
-          
-          <div class="about-features" role="list" aria-label="Caractéristiques du régiment">
-            <div class="feature" role="listitem">✅ Linebattles hebdomadaires</div>
-            <div class="feature" role="listitem">✅ Entraînements réguliers</div>
-            <div class="feature" role="listitem">✅ Communauté francophone</div>
-            <div class="feature" role="listitem">✅ Hiérarchie structurée</div>
+          <h3 class="about-subtitle">Une Unité de Renom</h3>
+          <p>Le 82ème Groupe Régimentaire est l'une des plus anciennes et prestigieuses unités militaires d'Europe. Fondée au cœur de l'Empire, elle a participé à tous les grands conflits qui ont façonné notre continent.</p>
+          <p>Avec plus de deux siècles d'histoire, le régiment symbolise l'honneur militaire, le courage face à l'adversité et la discipline inébranlable. Ses soldats sont formés aux plus hauts standards et prêts à servir.</p>
+        </div>
+
+        <div class="about-pillars">
+          <div class="pilier-card">
+            <div class="pilier-icon">⚔</div>
+            <h4 class="pilier-title">Honneur</h4>
+            <p class="pilier-text">Chaque soldat porte l'honneur du régiment avec fierté et distinction.</p>
           </div>
-          
-          <a href="#recrutement" class="btn-primary">Nous rejoindre</a>
+
+          <div class="pilier-card">
+            <div class="pilier-icon">🛡</div>
+            <h4 class="pilier-title">Courage</h4>
+            <p class="pilier-text">Face aux défis, nos guerriers ne fléchissent jamais et avancent.</p>
+          </div>
+
+          <div class="pilier-card">
+            <div class="pilier-icon">📋</div>
+            <h4 class="pilier-title">Discipline</h4>
+            <p class="pilier-text">L'ordre et la structure sont les fondements de notre force collective.</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-<!-- ===== HISTOIRE SECTION ===== -->
-<section class="histoire-section" id="histoire" aria-label="Histoire du régiment">
-  <div class="container">
-    
-    <!-- HEADER -->
-    <div class="section-header centered">
-      <span class="section-badge">⚜ Chronique Militaire ⚜</span>
-      <h2 class="section-title">Histoire du Régiment</h2>
-      <p class="section-subtitle">Depuis sa création sous l'Empire, le 82ème Groupe a forgé sa légende sur les champs de bataille d'Europe, portant haut les couleurs de la France.</p>
-      <div class="gold-line"></div>
-    </div>
-
-    <!-- TIMELINE AMÉLIORÉE -->
-    <div class="timeline">
-      
-      <!-- 1804 -->
-      <div class="timeline-item">
-        <div class="timeline-marker">
-          <div class="timeline-dot" role="img" aria-label="Fondation">🏛</div>
-          <div class="timeline-year">1804</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-card">
-            <h3 class="timeline-title">Création du Régiment</h3>
-            <p class="timeline-text">
-              Fondé par décret impérial de Napoléon Bonaparte, le 82ème Régiment d'Infanterie de Ligne est constitué à Paris. Ses premiers soldats sont recrutés parmi les meilleurs grognards de l'Empire. Un moment fondateur qui marquera plusieurs décennies d'histoire militaire.
-            </p>
-            <span class="timeline-tag">Fondation</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 1805 -->
-      <div class="timeline-item">
-        <div class="timeline-marker">
-          <div class="timeline-dot" role="img" aria-label="Victoire">⚔</div>
-          <div class="timeline-year">1805</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-card featured">
-            <h3 class="timeline-title">Campagne d'Austerlitz</h3>
-            <p class="timeline-text">
-              Le régiment participe à la Grande Armée lors de la campagne d'Allemagne. À Austerlitz, le 82ème se distingue par une <strong>charge décisive sur le flanc ennemi</strong>, recevant les éloges de l'Empereur en personne. Une victoire décisive qui scelle la réputation du régiment.
-            </p>
-            <span class="timeline-tag victory">Victoire Décisive</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 1807 -->
-      <div class="timeline-item">
-        <div class="timeline-marker">
-          <div class="timeline-dot" role="img" aria-label="Distinction">🦅</div>
-          <div class="timeline-year">1807</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-card">
-            <h3 class="timeline-title">Bataille de Friedland</h3>
-            <p class="timeline-text">
-              Engagé sur le front de Prusse, le 82ème contribue à la victoire écrasante contre les forces russes. <strong>L'Aigle du régiment</strong> est décoré d'une couronne de laurier impérial après la bataille, marquant ainsi son excellence au combat.
-            </p>
-            <span class="timeline-tag">Distinction Impériale</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 1808 -->
-      <div class="timeline-item">
-        <div class="timeline-marker">
-          <div class="timeline-dot" role="img" aria-label="Campagne">🌊</div>
-          <div class="timeline-year">1808</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-card">
-            <h3 class="timeline-title">Campagne d'Espagne</h3>
-            <p class="timeline-text">
-              Déployé sur la péninsule ibérique, le régiment affronte la guérilla espagnole dans des conditions éprouvantes. Malgré les pertes significatives, la discipline et la cohésion du 82ème restent exemplaires, forgeant des soldats plus aguerris.
-            </p>
-            <span class="timeline-tag">Épreuve</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 1812 -->
-      <div class="timeline-item">
-        <div class="timeline-marker">
-          <div class="timeline-dot" role="img" aria-label="Épreuve">❄</div>
-          <div class="timeline-year">1812</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-card warning">
-            <h3 class="timeline-title">La Retraite de Russie</h3>
-            <p class="timeline-text">
-              Parmi les survivants de la campagne de Russie, les hommes du 82ème témoignent d'un <strong>courage inébranlable</strong>. Malgré des pertes considérables, le régiment maintient sa formation jusqu'au passage de la Bérézina. Une épreuve qui teste l'essence même de la camaraderie.
-            </p>
-            <span class="timeline-tag warning">Épreuve Majeure</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- 1815 -->
-      <div class="timeline-item">
-        <div class="timeline-marker">
-          <div class="timeline-dot" role="img" aria-label="Mémoire">🌹</div>
-          <div class="timeline-year">1815</div>
-        </div>
-        <div class="timeline-content">
-          <div class="timeline-card">
-            <h3 class="timeline-title">Les Cent-Jours & Waterloo</h3>
-            <p class="timeline-text">
-              Rallié à Napoléon lors des Cent-Jours, le 82ème combat vaillamment à Waterloo. La défaite marque la fin de l'Empire, mais <strong>la gloire du régiment reste gravée</strong> dans les annales militaires françaises. Un dernier combat pour l'honneur.
-            </p>
-            <span class="timeline-tag">Mémoire Éternelle</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- CITATION IMPÉRIALE -->
-    <div class="histoire-quote">
-      <blockquote>
-        « Ces hommes n'ont pas seulement servi la France, ils ont incarné l'âme même de la Grande Armée. »
-      </blockquote>
-      <cite>— Napoléon Bonaparte, Bulletin de la Grande Armée</cite>
-    </div>
-
-  </div>
-</section>
-
-
-      <!-- ===== TRAILER/VIDÉO ===== -->
-      <section class="trailer-section" id="trailer" aria-label="Vidéo de présentation du régiment">
-        <div class="section-header">
-          <span class="section-badge">🎬 Cinématique Officielle 🎬</span>
-          <h2 class="section-title">Trailer du Régiment</h2>
-          <div class="gold-line" aria-hidden="true"></div>
-          <p class="section-subtitle">
-            Découvrez la puissance et la gloire du 82ème Groupe en action, 
-            sur les champs de bataille de Holdfast.
-          </p>
-        </div>
-
-        <div class="trailer-wrapper">
-          <div class="trailer-frame">
-            <iframe
-              src="https://www.youtube.com/embed/Ug47vZNtIdI"
-              title="Trailer du 82ème GRP - Holdfast Nations At War"
-              width="100%"
-              height="500"
-              frameborder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
-              loading="lazy">
-            </iframe>
-          </div>
-
-          <div class="trailer-deco trailer-deco-left" aria-hidden="true">⚜</div>
-          <div class="trailer-deco trailer-deco-right" aria-hidden="true">⚜</div>
-        </div>
-
-        <div class="trailer-info" role="list" aria-label="Informations vidéo">
-          <div class="trailer-info-card" role="listitem">
-            <span class="info-icon" aria-hidden="true">⚔</span>
-            <span class="info-text">Combats en Ligne</span>
-          </div>
-          <div class="trailer-info-card" role="listitem">
-            <span class="info-icon" aria-hidden="true">🦅</span>
-            <span class="info-text">Gloire Impériale</span>
-          </div>
-          <div class="trailer-info-card" role="listitem">
-            <span class="info-icon" aria-hidden="true">🥁</span>
-            <span class="info-text">Holdfast Nations</span>
-          </div>
-          <div class="trailer-info-card" role="listitem">
-            <span class="info-icon" aria-hidden="true">🏆</span>
-            <span class="info-text">82ème Régiment</span>
-          </div>
-        </div>
-      </section>
-
-      <!-- ===== CITATION ===== -->
-      <div class="histoire-quote" role="region" aria-label="Citation historique">
-        <div class="quote-icon" aria-hidden="true">❝</div>
-        <blockquote lang="fr">
-          Ces hommes n'ont pas seulement servi la France, 
-          ils ont incarné l'âme même de la Grande Armée.
-        </blockquote>
-        <cite>— Napoléon Bonaparte, Bulletin de la Grande Armée</cite>
-      </div>
-
-    </div>
-  </section>
-
-<!-- ===== GRADES DU RÉGIMENT ===== -->
-<section class="grades-section" id="grades" aria-label="Organigramme des grades du régiment">
-  <div class="container">
-    
-    <div class="section-header centered">
-      <span class="section-badge">⚜ HIÉRARCHIE MILITAIRE ⚜</span>
-      <h2 class="section-title">Grades du Régiment</h2>
-      <div class="gold-line"></div>
-    </div>
-
-    <div class="organigramme">
-      
-      <!-- COMMANDEMENT GÉNÉRAL (SOMMET) -->
-      <div class="organigramme-level level-1">
-        <div class="command-box featured">
-          <h3 class="command-title">COMMANDEMENT GÉNÉRAL</h3>
-          <p class="command-subtitle">ÉTAT-MAJOR DU 82<span class="superscript">E</span>GRP</p>
-        </div>
-        <!-- LIGNE VERTICALE DESCENDANTE -->
-        <div class="vertical-line"></div>
-      </div>
-
-      <!-- NIVEAU 2 - TROIS CORPS -->
-      <div class="organigramme-level level-2">
-        <!-- GAUCHE -->
-        <div class="corps-box">
-          <div class="corps-top-line"></div>
-          <div class="grade-box">
-            <span class="grade-number">1<span class="superscript">ER</span></span>
-            <h4 class="grade-corps-title">CORPS</h4>
-            <p class="grade-motto">« Du tonnerre naît la victoire ! »</p>
-            
-            <!-- SOUS-GRADES -->
-            <div class="sous-grades">
-              <div class="sous-grade">
-                <span class="sous-grade-rank">Marie Louise</span>
-                <p class="sous-grade-desc">Recrue de base - Formation intensive</p>
-              </div>
-              <div class="sous-grade">
-                <span class="sous-grade-rank">Grenadier</span>
-                <p class="sous-grade-desc">Soldat expérimenté - Élite d'infanterie</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- CENTRE -->
-        <div class="corps-box center">
-          <div class="corps-top-line"></div>
-          <div class="grade-box featured-corps">
-            <span class="grade-number">2<span class="superscript">ÈME</span></span>
-            <h4 class="grade-corps-title">CORPS</h4>
-            <p class="grade-motto">« La où nous passons, le silence suit ! »</p>
-            
-            <!-- SOUS-GRADES -->
-            <div class="sous-grades">
-              <div class="sous-grade">
-                <span class="sous-grade-rank">Voltigeur</span>
-                <p class="sous-grade-desc">Combattant agile - Tactiques spécialisées</p>
-              </div>
-              <div class="sous-grade">
-                <span class="sous-grade-rank">Sergent</span>
-                <p class="sous-grade-desc">Sous-officier - Encadrement des troupes</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- DROIT -->
-        <div class="corps-box">
-          <div class="corps-top-line"></div>
-          <div class="grade-box alert">
-            <span class="grade-number">3<span class="superscript">ÈME</span></span>
-            <h4 class="grade-corps-title">CORPS</h4>
-            <p class="grade-motto">« La Garde meurt mais ne se rend pas ! »</p>
-            
-            <!-- SOUS-GRADES -->
-            <div class="sous-grades">
-              <div class="sous-grade">
-                <span class="sous-grade-rank">Lieutenant</span>
-                <p class="sous-grade-desc">Officier subalterne - Commandement de section</p>
-              </div>
-              <div class="sous-grade">
-                <span class="sous-grade-rank">Colonel</span>
-                <p class="sous-grade-desc">Officier supérieur - Chef de régiment</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- NIVEAU 3 - LEADERSHIP SUPRÊME -->
-      <div class="organigramme-level level-3">
-        <!-- LIGNE VERTICALE MONTANTE -->
-        <div class="vertical-line-up"></div>
-        
-        <div class="supreme-box">
-          <span class="supreme-rank">⭐ MARÉCHAL D'EMPIRE ⭐</span>
-          <h3 class="supreme-title">Chef Suprême</h3>
-          <p class="supreme-subtitle">Commandant en Chef du 82<span class="superscript">E</span> GRP</p>
-          <p class="supreme-desc">
-            Incarne les valeurs du régiment : honneur, discipline et camaraderie. 
-            Dirige l'ensemble des opérations et maintient la cohésion du régiment.
-          </p>
-          <div class="supreme-badges">
-            <span class="badge">👑 Autorité Suprême</span>
-            <span class="badge">🎖️ Légendaire</span>
-            <span class="badge">⚔️ Commandement</span>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- DESCRIPTION COMPLÈTE -->
-    <div class="grades-description">
-      <div class="desc-grid">
-        
-        <div class="desc-card">
-          <h4 class="desc-title">Soldats du Rang</h4>
-          <p class="desc-text">
-            Les fondations du régiment. <strong>Marie Louise</strong> est la recrue de base, 
-            formée et encadrée par les vétérans. <strong>Grenadier</strong> représente 
-            le soldat expérimenté, éprouvé au combat. <strong>Voltigeur</strong> est le 
-            combattant agile, spécialisé dans les tactiques.
-          </p>
-        </div>
-
-        <div class="desc-card">
-          <h4 class="desc-title">Sous-Officiers</h4>
-          <p class="desc-text">
-            <strong>Sergent</strong> incarne le sous-officier, responsable de l'encadrement 
-            des troupes. Il assure la discipline et la transmission des ordres du commandement.
-          </p>
-        </div>
-
-        <div class="desc-card">
-          <h4 class="desc-title">Officiers</h4>
-          <p class="desc-text">
-            <strong>Lieutenant</strong> est l'officier subalterne, commandant une section. 
-            <strong>Colonel</strong> est l'officier supérieur, chef direct du régiment.
-          </p>
-        </div>
-
-        <div class="desc-card featured-desc">
-          <h4 class="desc-title">Leadership Suprême</h4>
-          <p class="desc-text">
-            <strong>Maréchal d'Empire</strong> est le chef suprême du régiment. 
-            Il incarne les valeurs du 82<span class="superscript">E</span> GRP et dirige 
-            l'ensemble des opérations avec autorité et sagesse.
-          </p>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-  
-  <!-- ===== RECRUTEMENT ===== -->
-  <section id="recrutement" class="recrutement-section" aria-label="Section de recrutement">
+  <!-- ===== HISTOIRE SECTION ===== -->
+  <section class="histoire-section" id="histoire" aria-label="Histoire du régiment">
     <div class="container">
-      <div class="recrutement-content">
-        <div class="section-header">
-          <p class="section-sub">Rejoignez-nous</p>
-          <h2>Recrutement Ouvert</h2>
-          <div class="divider" aria-hidden="true"><span>⚜️</span></div>
-        </div>
-        
-        <p class="recrutement-text">Que vous soyez vétéran ou nouvelle recrue, le 82ème GRP vous accueille dans ses rangs.</p>
-        
-        <div class="recrutement-steps" role="list" aria-label="Étapes de recrutement">
-          <div class="step" role="listitem">
-            <div class="step-number">1</div>
-            <p>Rejoindre le Discord</p>
-          </div>
-          <div class="step-arrow" aria-hidden="true">→</div>
-          <div class="step" role="listitem">
-            <div class="step-number">2</div>
-            <p>Ouvrir un ticket</p>
-          </div>
-          <div class="step-arrow" aria-hidden="true">→</div>
-          <div class="step" role="listitem">
-            <div class="step-number">3</div>
-            <p>Passer l'entretien</p>
-          </div>
-          <div class="step-arrow" aria-hidden="true">→</div>
-          <div class="step" role="listitem">
-            <div class="step-number">4</div>
-            <p>Bienvenue soldat !</p>
-          </div>
-        </div>
-        
-        <a href="https://discord.gg/dYntFu9KgY" class="btn-primary large" target="_blank" rel="noopener noreferrer">
-          Rejoindre le Discord
-        </a>
+      
+      <div class="section-header centered">
+        <span class="section-badge">⚜ Chronique Militaire ⚜</span>
+        <h2 class="section-title">Histoire du Régiment</h2>
+        <p class="section-subtitle">Depuis sa création sous l'Empire, le 82ème Groupe a forgé sa légende sur les champs de bataille d'Europe, portant haut les couleurs de la France.</p>
+        <div class="gold-line"></div>
       </div>
+
+      <!-- TIMELINE -->
+      <div class="timeline">
+        
+        <!-- 1804 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Fondation">🏛</div>
+            <div class="timeline-year">1804</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Création du Régiment</h3>
+              <p class="timeline-text">
+                Fondé par décret impérial de Napoléon Bonaparte, le 82ème Régiment d'Infanterie de Ligne est constitué à Paris. Ses premiers soldats sont recrutés parmi les meilleurs grognards de l'Empire. Un moment fondateur qui marquera plusieurs décennies d'histoire militaire.
+              </p>
+              <span class="timeline-tag">Fondation</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1805 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Victoire">⚔</div>
+            <div class="timeline-year">1805</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card featured">
+              <h3 class="timeline-title">Campagne d'Austerlitz</h3>
+              <p class="timeline-text">
+                Le régiment participe à la Grande Armée lors de la campagne d'Allemagne. À Austerlitz, ses bataillons enfoncent les lignes ennemies et remportent une victoire décisive. Cette bataille reste la plus glorieuse de l'époque napoléonienne.
+              </p>
+              <span class="timeline-tag featured-tag">Victoire Majeure</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1815 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Épreuve">⚒</div>
+            <div class="timeline-year">1815</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Waterloo et la Chute</h3>
+              <p class="timeline-text">
+                Le régiment combat avec acharnement aux côtés de l'Empereur à Waterloo. Malgré son courage inébranlable et ses charges héroïques, il ne peut contenir la marée alliée. Cette défaite marque le début d'une nouvelle ère pour l'unité.
+              </p>
+              <span class="timeline-tag">Épreuve</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1870 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Rédemption">🏅</div>
+            <div class="timeline-year">1870</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Guerre Franco-Prussienne</h3>
+              <p class="timeline-text">
+                Lors de cette guerre difficile, le régiment se bat avec détermination pour défendre la Lorraine. Bien que la France soit vaincue, les soldats du 82ème gagnent le respect des ennemis par leur bravoure exceptionnelle et leur sacrifice.
+              </p>
+              <span class="timeline-tag">Rédemption</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1918 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Triomphe">👑</div>
+            <div class="timeline-year">1918</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card featured">
+              <h3 class="timeline-title">Victoire de la Grande Guerre</h3>
+              <p class="timeline-text">
+                Après quatre ans de combats féroces dans les tranchées de la Somme et de Verdun, le régiment participe à l'offensive finale qui brise les lignes allemandes. La Victoire est enfin au rendez-vous. Le régiment reçoit les plus hautes distinctions.
+              </p>
+              <span class="timeline-tag featured-tag">Triomphe</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1944 -->
+        <div class="timeline-item">
+          <div class="timeline-marker">
+            <div class="timeline-dot" role="img" aria-label="Libération">🗽</div>
+            <div class="timeline-year">1944</div>
+          </div>
+          <div class="timeline-content">
+            <div class="timeline-card">
+              <h3 class="timeline-title">Débarquement et Libération</h3>
+              <p class="timeline-text">
+                Le régiment participe aux opérations de débarquement en Normandie. Traversant la Manche sous le feu ennemi, il s'engage sur les plages fortifiées. Ses soldats contribuent à la libération de la France et à la défaite du nazisme.
+              </p>
+              <span class="timeline-tag">Libération</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- QUOTE IMPÉRIALE -->
+      <div class="histoire-quote">
+        <blockquote>
+          "Un soldat du 82ème Groupe vaut cent ennemis ordinaires. Son courage est légende, sa discipline sans égale. Là où il passe, la victoire le suit."
+        </blockquote>
+        <cite>— Napoléon Bonaparte, 1806</cite>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ===== GRADES DU RÉGIMENT ===== -->
+  <section class="grades-section" id="grades" aria-label="Organigramme des grades du régiment">
+    <div class="container">
+      
+      <!-- HEADER -->
+      <div class="section-header centered">
+        <span class="section-badge">⚜ HIÉRARCHIE MILITAIRE ⚜</span>
+        <h2 class="section-title">Grades du Régiment</h2>
+        <div class="gold-line"></div>
+      </div>
+
+      <!-- ORGANIGRAMME PRINCIPAL -->
+      <div class="organigramme-wrapper">
+        
+        <!-- NIVEAU 1 : COMMANDEMENT GÉNÉRAL -->
+        <div class="organigramme-level level-1">
+          <div class="command-box">
+            <h3 class="command-title">COMMANDEMENT GÉNÉRAL</h3>
+            <p class="command-subtitle">ÉTAT-MAJOR DU 82<span class="superscript">E</span> GRP</p>
+          </div>
+          <div class="line-down"></div>
+        </div>
+
+        <!-- NIVEAU 2 : TROIS CORPS -->
+        <div class="organigramme-level level-2">
+          
+          <!-- CORPS 1 -->
+          <div class="corps-column">
+            <div class="line-up"></div>
+            <div class="grade-box corps-1">
+              <div class="grade-header">
+                <span class="grade-number">1<span class="superscript">ER</span></span>
+                <h4 class="grade-corps-title">CORPS</h4>
+              </div>
+              <p class="grade-motto">« Du tonnerre naît la victoire ! »</p>
+              
+              <div class="sous-grades-list">
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Marie Louise</span>
+                  <p class="sous-grade-desc">Commandante de Compagnie</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Capitaine</span>
+                  <p class="sous-grade-desc">Chef de Peloton</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Sergent</span>
+                  <p class="sous-grade-desc">Chef de Section</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Caporal</span>
+                  <p class="sous-grade-desc">Chef de Groupe</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CORPS 2 -->
+          <div class="corps-column">
+            <div class="line-up"></div>
+            <div class="grade-box corps-2">
+              <div class="grade-header">
+                <span class="grade-number">2<span class="superscript">ÈME</span></span>
+                <h4 class="grade-corps-title">CORPS</h4>
+              </div>
+              <p class="grade-motto">« Là où nous passons, le silence suit ! »</p>
+              
+              <div class="sous-grades-list">
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Colonel</span>
+                  <p class="sous-grade-desc">Commandant du Corps</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Commandant</span>
+                  <p class="sous-grade-desc">Chef de Bataillon</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Lieutenant</span>
+                  <p class="sous-grade-desc">Chef de Peloton</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Aspirant</span>
+                  <p class="sous-grade-desc">Aide de Camp</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CORPS 3 -->
+          <div class="corps-column">
+            <div class="line-up"></div>
+            <div class="grade-box corps-3">
+              <div class="grade-header">
+                <span class="grade-number">3<span class="superscript">ÈME</span></span>
+                <h4 class="grade-corps-title">CORPS</h4>
+              </div>
+              <p class="grade-motto">« La Garde meurt mais ne se rend pas ! »</p>
+              
+              <div class="sous-grades-list">
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Général</span>
+                  <p class="sous-grade-desc">Commandant Suprême</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Officier</span>
+                  <p class="sous-grade-desc">Chef de Régiment</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Sous-officier</span>
+                  <p class="sous-grade-desc">Chef d'Escouade</p>
+                </div>
+                <div class="sous-grade">
+                  <span class="sous-grade-rank">Soldat</span>
+                  <p class="sous-grade-desc">Combattant</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- RECRUTEMENT -->
+      <div class="recrutement-section">
+        <h3 class="recrutement-title">Recrutement Ouvert</h3>
+        <p class="recrutement-desc">Que vous soyez militaire ou non-convaincu, le 82ème GRP vous accueille dans ses rangs.</p>
+        
+        <div class="recrutement-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <h4 class="step-title">Candidature</h4>
+            <p class="step-desc">Postule à l'Officiel</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">2</div>
+            <h4 class="step-title">Entretien</h4>
+            <p class="step-desc">Rencontre au Staff</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">3</div>
+            <h4 class="step-title">Intégration</h4>
+            <p class="step-desc">Entraînement Militaire</p>
+          </div>
+          <div class="step-arrow">→</div>
+          <div class="step">
+            <div class="step-number">4</div>
+            <h4 class="step-title">Engagement</h4>
+            <p class="step-desc">Bienvenue au Régiment</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
   <!-- ===== FOOTER ===== -->
-  <footer class="footer" role="contentinfo" aria-label="Pied de page du site">
+  <footer class="footer">
     <div class="container">
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <h3>82<span class="superscript">ème</span> GRP</h3>
-          <p>Régiment français sur<br>Holdfast: Nations At War</p>
-          <p class="footer-quote">« L'honneur ne se rend pas,<br>il se conquiert. »</p>
-        </div>
-        
-        <nav class="footer-links" aria-label="Navigation du footer">
-          <h4>Navigation</h4>
-          <ul>
-            <li><a href="#accueil">Accueil</a></li>
-            <li><a href="#histoire">Histoire</a></li>
-            <li><a href="#piliers">Le Régiment</a></li>
-            <li><a href="#recrutement">Rejoindre</a></li>
-          </ul>
-        </nav>
-        
-        <div class="footer-social">
-          <h4>Nous rejoindre</h4>
-          <a href="https://discord.gg/dYntFu9KgY" class="footer-discord" target="_blank" rel="noopener noreferrer" aria-label="Discord du régiment (nouvel onglet)">
-            Discord du Régiment
-          </a>
-        </div>
-      </div>
-      
-      <div class="footer-bottom">
-        <p>© 2026 82ème GRP — Tous droits réservés</p>
-      </div>
+      <p>&copy; 2025 Grand GRP - Tous droits réservés.</p>
     </div>
   </footer>
 
