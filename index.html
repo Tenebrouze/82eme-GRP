@@ -5,491 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>82ème GRP - Grande Régiment Protecteur</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #000;
-      color: #fff;
-      overflow-x: hidden;
-    }
-
-    /* ===== NAVBAR ===== */
-    .navbar {
-      display: flex;
-      align-items: center;
-      height: 60px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-
-    .navbar-left {
-      background: linear-gradient(90deg, #002395 0%, #002395 40%, #fff 40%, #fff 60%, #c41e3a 60%, #c41e3a 100%);
-      width: 35%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding-left: 30px;
-      font-size: 16px;
-      font-weight: 700;
-      color: #000;
-      letter-spacing: 1px;
-    }
-
-    .navbar-center {
-      width: 45%;
-      display: flex;
-      justify-content: center;
-      gap: 35px;
-      background-color: #fff;
-      height: 100%;
-      align-items: center;
-    }
-
-    .navbar-center a {
-      text-decoration: none;
-      color: #000;
-      font-size: 13px;
-      font-weight: 500;
-      transition: 0.3s ease;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .navbar-center a:hover {
-      color: #c41e3a;
-      font-weight: 600;
-    }
-
-    .navbar-right {
-      width: 20%;
-      background-color: #c41e3a;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      text-transform: uppercase;
-      font-size: 13px;
-      letter-spacing: 1px;
-    }
-
-    .navbar-right:hover {
-      background-color: #a01630;
-      box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.3);
-    }
-
-    /* ===== HERO SECTION ===== */
-    .hero {
-      background: linear-gradient(90deg, 
-        #002395 0%, 
-        #002395 25%, 
-        transparent 25%, 
-        transparent 50%,
-        transparent 50%,
-        transparent 75%,
-        #c41e3a 75%, 
-        #c41e3a 100%);
-      min-height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 80px 20px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 0%, transparent 70%);
-      pointer-events: none;
-    }
-
-    .hero::after {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: 
-        repeating-linear-gradient(
-          90deg,
-          transparent,
-          transparent 2px,
-          rgba(255,255,255,0.02) 2px,
-          rgba(255,255,255,0.02) 4px
-        );
-      pointer-events: none;
-    }
-
-    .hero-content {
-      position: relative;
-      z-index: 2;
-      max-width: 900px;
-      animation: fadeInUp 1s ease;
-    }
-
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .hero h2 {
-      font-size: 28px;
-      font-weight: 400;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-      opacity: 0.9;
-    }
-
-    .hero h1 {
-      font-size: 80px;
-      font-weight: 800;
-      margin-bottom: 20px;
-      letter-spacing: 3px;
-      text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    }
-
-    .hero h3 {
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-      opacity: 0.95;
-    }
-
-    .hero p {
-      font-size: 15px;
-      font-style: italic;
-      margin-bottom: 50px;
-      opacity: 0.85;
-      letter-spacing: 0.5px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 16px 45px;
-      border: 2px solid #fff;
-      color: #fff;
-      text-decoration: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      background-color: transparent;
-      border-radius: 4px;
-      font-size: 13px;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-
-    .btn:hover {
-      background-color: #c41e3a;
-      border-color: #c41e3a;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(196, 30, 58, 0.4);
-    }
-
-    /* ===== SECTION PILIERS ===== */
-    .piliers-section {
-      background-color: #000;
-      padding: 100px 20px;
-      text-align: center;
-    }
-
-    .piliers-title {
-      font-size: 54px;
-      font-weight: 800;
-      margin-bottom: 20px;
-      letter-spacing: 2px;
-    }
-
-    .piliers-underline {
-      width: 100px;
-      height: 3px;
-      background: linear-gradient(90deg, #002395 0%, #002395 33%, #c41e3a 33%, #c41e3a 66%, #fff 66%, #fff 100%);
-      margin: 0 auto 50px;
-    }
-
-    .piliers-subtitle {
-      font-size: 15px;
-      color: #aaa;
-      margin-bottom: 80px;
-      letter-spacing: 0.5px;
-    }
-
-    .piliers-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .pilier-card {
-      border: 2px solid #222;
-      padding: 50px 35px;
-      background: linear-gradient(135deg, rgba(0, 35, 149, 0.1) 0%, rgba(196, 30, 58, 0.05) 100%);
-      border-radius: 8px;
-      transition: all 0.4s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pilier-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 3px;
-      background: linear-gradient(90deg, #002395 0%, #c41e3a 100%);
-      transform: scaleX(0);
-      transform-origin: left;
-      transition: transform 0.4s ease;
-    }
-
-    .pilier-card:hover::before {
-      transform: scaleX(1);
-    }
-
-    .pilier-card:hover {
-      border-color: #c41e3a;
-      transform: translateY(-8px);
-      background: linear-gradient(135deg, rgba(0, 35, 149, 0.2) 0%, rgba(196, 30, 58, 0.15) 100%);
-    }
-
-    .pilier-icon {
-      font-size: 56px;
-      margin-bottom: 25px;
-      display: inline-block;
-      transition: transform 0.3s ease;
-    }
-
-    .pilier-card:hover .pilier-icon {
-      transform: scale(1.1) rotate(-5deg);
-    }
-
-    .pilier-card h3 {
-      font-size: 22px;
-      font-weight: 700;
-      margin-bottom: 15px;
-      letter-spacing: 1px;
-    }
-
-    .pilier-card p {
-      font-size: 14px;
-      color: #bbb;
-      line-height: 1.8;
-      letter-spacing: 0.3px;
-    }
-
-    /* ===== ABOUT SECTION ===== */
-    .about-section {
-      background-color: #0a0a0a;
-      padding: 100px 20px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      max-width: 1400px;
-      margin: 0 auto;
-    }
-
-    .about-content h2 {
-      font-size: 48px;
-      font-weight: 800;
-      margin-bottom: 30px;
-      letter-spacing: 2px;
-    }
-
-    .about-content p {
-      font-size: 15px;
-      color: #bbb;
-      margin-bottom: 20px;
-      line-height: 1.9;
-      letter-spacing: 0.5px;
-    }
-
-    .about-image {
-      width: 100%;
-      height: 400px;
-      background: linear-gradient(135deg, #002395 0%, #c41e3a 100%);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 60px;
-    }
-
-    /* ===== FOOTER ===== */
-    footer {
-      background-color: #0a0a0a;
-      border-top: 1px solid #222;
-      padding: 60px 20px 30px;
-    }
-
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 40px;
-      max-width: 1200px;
-      margin: 0 auto 40px;
-    }
-
-    .footer-section h4 {
-      font-size: 16px;
-      font-weight: 700;
-      margin-bottom: 20px;
-      letter-spacing: 1px;
-      text-transform: uppercase;
-    }
-
-    .footer-section ul {
-      list-style: none;
-    }
-
-    .footer-section ul li {
-      margin-bottom: 12px;
-    }
-
-    .footer-section ul li a {
-      color: #aaa;
-      text-decoration: none;
-      font-size: 14px;
-      transition: all 0.3s ease;
-    }
-
-    .footer-section ul li a:hover {
-      color: #c41e3a;
-      padding-left: 8px;
-    }
-
-    .footer-bottom {
-      text-align: center;
-      border-top: 1px solid #222;
-      padding-top: 30px;
-      color: #666;
-      font-size: 13px;
-    }
-
-    /* ===== RESPONSIVE ===== */
-    @media (max-width: 768px) {
-      .navbar {
-        flex-wrap: wrap;
-        height: auto;
-      }
-
-      .navbar-left,
-      .navbar-center,
-      .navbar-right {
-        width: 100%;
-        height: 50px;
-      }
-
-      .navbar-center {
-        gap: 15px;
-        order: 3;
-        width: 100%;
-      }
-
-      .navbar-center a {
-        font-size: 12px;
-      }
-
-      .hero {
-        min-height: 500px;
-        padding: 60px 20px;
-        background: linear-gradient(180deg, #002395 0%, #c41e3a 100%);
-      }
-
-      .hero h1 {
-        font-size: 54px;
-      }
-
-      .hero h2,
-      .hero h3 {
-        font-size: 18px;
-      }
-
-      .about-section {
-        grid-template-columns: 1fr;
-        padding: 60px 20px;
-      }
-
-      .piliers-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-      }
-
-      .piliers-title {
-        font-size: 40px;
-      }
-    }
-
-    @media (max-width: 480px) {
-      .navbar-left {
-        font-size: 12px;
-        padding-left: 15px;
-      }
-
-      .navbar-center {
-        gap: 10px;
-      }
-
-      .navbar-center a {
-        font-size: 11px;
-      }
-
-      .hero h1 {
-        font-size: 42px;
-        letter-spacing: 2px;
-      }
-
-      .hero h2,
-      .hero h3 {
-        font-size: 16px;
-      }
-
-      .piliers-title {
-        font-size: 32px;
-      }
-
-      .btn {
-        padding: 14px 35px;
-        font-size: 12px;
-      }
-    }
-
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- ===== NAVBAR ===== -->
+  <!-- NAVBAR -->
   <nav class="navbar">
     <div class="navbar-left">🇫🇷 82ème GRP</div>
     <div class="navbar-center">
@@ -501,8 +21,8 @@
     <div class="navbar-right">CONTACT</div>
   </nav>
 
-  <!-- ===== HERO SECTION ===== -->
-  <section class="hero" id="accueil">
+  <!-- HERO SECTION -->
+  <section class="hero">
     <div class="hero-content">
       <h2>Bienvenue dans le</h2>
       <h1>82ème</h1>
@@ -512,8 +32,8 @@
     </div>
   </section>
 
-  <!-- ===== PILIERS SECTION ===== -->
-  <section class="piliers-section" id="piliers">
+  <!-- PILIERS SECTION -->
+  <section class="piliers-section">
     <h2 class="piliers-title">Les 4 Piliers</h2>
     <div class="piliers-underline"></div>
     <p class="piliers-subtitle">Les valeurs fondamentales de notre régiment</p>
@@ -522,46 +42,40 @@
       <div class="pilier-card">
         <div class="pilier-icon">⚔️</div>
         <h3>Honneur</h3>
-        <p>Nous honorons nos traditions et défendons nos valeurs avec fierté et respect envers nos anciens.</p>
+        <p>Nous honorons nos traditions et défendons nos valeurs avec fierté et respect.</p>
       </div>
 
       <div class="pilier-card">
         <div class="pilier-icon">🦁</div>
         <h3>Courage</h3>
-        <p>Nous affrontons les défis avec détermination, bravoure et sans jamais reculer face aux adversités.</p>
+        <p>Nous affrontons les défis avec détermination et bravoure sans jamais reculer.</p>
       </div>
 
       <div class="pilier-card">
         <div class="pilier-icon">🛡️</div>
         <h3>Discipline</h3>
-        <p>Nous respectons l'ordre, la structure et les principes fondamentaux de notre organisation militaire.</p>
+        <p>Nous respectons l'ordre et la structure de notre régiment avec intégrité.</p>
       </div>
 
       <div class="pilier-card">
         <div class="pilier-icon">👑</div>
         <h3>Excellence</h3>
-        <p>Nous visons la perfection dans chaque action et chaque décision prise par nos soldats.</p>
+        <p>Nous visons la perfection dans chaque action et chaque décision.</p>
       </div>
     </div>
   </section>
 
-  <!-- ===== ABOUT SECTION ===== -->
-  <section class="about-section" id="apropos">
+  <!-- ABOUT SECTION -->
+  <section class="about-section">
     <div class="about-content">
       <h2>À Propos du 82ème</h2>
-      <p>
-        Le 82ème Grande Régiment Protecteur est une unité d'élite fondée sur les principes de l'honneur, du courage et de la discipline. 
-        Avec une longue histoire de service, nous continuons à protéger et à servir avec intégrité.
-      </p>
-      <p>
-        Nos soldats sont entraînés aux plus hauts standards militaires. Nous cherchons constamment des individus motivés et passionnés 
-        à rejoindre nos rangs pour continuer notre mission de protection et de service.
-      </p>
+      <p>Le 82ème Grande Régiment Protecteur est une unité d'élite fondée sur les principes de l'honneur, du courage et de la discipline.</p>
+      <p>Nos soldats sont entraînés aux plus hauts standards militaires. Nous cherchons des individus motivés à rejoindre nos rangs.</p>
     </div>
     <div class="about-image">🎖️</div>
   </section>
 
-  <!-- ===== FOOTER ===== -->
+  <!-- FOOTER -->
   <footer>
     <div class="footer-content">
       <div class="footer-section">
@@ -606,7 +120,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; 2026 82ème GRP - Grande Régiment Protecteur | Tous droits réservés</p>
+      <p>&copy; 2026 82ème GRP - Tous droits réservés</p>
     </div>
   </footer>
 
