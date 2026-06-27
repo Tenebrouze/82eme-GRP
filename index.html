@@ -8,19 +8,27 @@
 </head>
 <body>
     <!-- ========== HEADER ========== -->
-    <header>
+    <header id="navbar">
         <div class="header-container">
             <div class="logo">
                 <div class="logo-img">⚜</div>
                 82 GRP
             </div>
-            <nav>
-                <a href="#about">LE RÉGIMENT</a>
-                <a href="#compagnies">COMPAGNIES</a>
-                <a href="#trailer">TRAILER</a>
-                <a href="#histoire">HISTOIRE</a>
-                <a href="#contact">REJOINDRE</a>
-                <a href="https://discord.gg/VOTRE_LIEN" class="discord-btn" target="_blank">DISCORD</a>
+            
+            <!-- HAMBURGER MENU -->
+            <button id="navToggle" class="nav-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav id="navLinks">
+                <a href="#about" class="nav-link">LE RÉGIMENT</a>
+                <a href="#compagnies" class="nav-link">COMPAGNIES</a>
+                <a href="#trailer" class="nav-link">TRAILER</a>
+                <a href="#histoire" class="nav-link">HISTOIRE</a>
+                <a href="#contact" class="nav-link">REJOINDRE</a>
+                <a href="https://discord.gg/NMWq6xRyd7" class="discord-btn" target="_blank">DISCORD</a>
             </nav>
         </div>
     </header>
@@ -37,6 +45,7 @@
             </div>
             <a href="#about" class="hero-btn">Découvrir</a>
         </div>
+        <div class="hero-scroll">↓</div>
     </section>
 
     <!-- ========== ABOUT ========== -->
