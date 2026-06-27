@@ -1,79 +1,121 @@
-// ===== NAVBAR SCROLL =====
-const navbar = document.getElementById('navbar');
-window.addEventListener('scroll', () => {
-  navbar.classList.toggle('scrolled', window.scrollY > 50);
-});
-
-// ===== MENU MOBILE =====
+// ===== NAVBAR TOGGLE =====
 const navToggle = document.getElementById('navToggle');
 const navLinks = document.getElementById('navLinks');
 
 navToggle.addEventListener('click', () => {
   navLinks.classList.toggle('open');
-  navToggle.textContent = navLinks.classList.contains('open') ? '✕' : '☰';
 });
 
-// Fermer le menu en cliquant sur un lien
-navLinks.querySelectorAll('a').forEach(link => {
+// Fermer le menu quand on clique sur un lien
+document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
-    navToggle.textContent = '☰';
   });
 });
 
-// ===== SCROLL REVEAL =====
-const revealElements = document.querySelectorAll(
-  '.pilier-card, .timeline-card, .about-text, .about-image, .step'
-);
+// ===== NAVBAR SCROLL EFFECT =====
+const navbar = document.getElementById('navbar');
+let lastScrollTop = 0;
 
-revealElements.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+window.addEventListener('scroll', () => {
+  const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+  if (scrollTop > 100) {
+    navbar.style.background = 'rgba(6, 13, 26, 0.95)';
+    navbar.style.boxShadow = '0 2px 10px rgba(201, 168, 76, 0.1)';
+  } else {
+    navbar.style.background = 'rgba(6, 13, 26, 0.9)';
+    navbar.style.boxShadow = 'none';
+  }
+
+  lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
+
+// ===== SMOOTH SCROLL =====
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// ===== SCROLL ANIMATIONS =====
+const observerOptions = {
+  threshold: 0.1,
+  rootMargin: '0px 0px -100px 0px'
+};
 
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry, i) => {
+  entries.forEach(entry => {
     if (entry.isIntersecting) {
-      setTimeout(() => {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-      }, 100);
-      observer.unobserve(entry.target);
+      entry.target.style.opacity = '1';
+      entry.target.style.transform = 'translateY(0)';
     }
   });
-}, { threshold: 0.12 });
+}, observerOptions);
 
-revealElements.forEach(el => observer.observe(el));
-
-// ===== SCROLL SMOOTH HERO =====
-document.querySelector('.hero-scroll')?.addEventListener('click', () => {
-  document.getElementById('piliers').scrollIntoView({ behavior: 'smooth' });
+// Observer les éléments avec animation
+document.querySelectorAll('.timeline-item, .pilier-card, .grade-box').forEach(el => {
+  el.style.opacity = '0';
+  el.style.transform = 'translateY(20px)';
+  el.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+  observer.observe(el);
 });
 
-// ===== DISCORD STATS =====
-const GUILD_ID = '1177933822923387041';
-
-async function fetchDiscordStats() {
-  try {
-    const response = await fetch(`https://discord.com/api/v10/guilds/${GUILD_ID}/widget.json`);
-    
-    if (!response.ok) {
-      throw new Error(`Erreur API: ${response.status}`);
+// ===== SCROLL HERO INDICATOR =====
+const heroScroll = document.querySelector('.hero-scroll');
+if (heroScroll) {
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 100) {
+      heroScroll.style.opacity = '0';
+      heroScroll.style.pointerEvents = 'none';
+    } else {
+      heroScroll.style.opacity = '1';
+      heroScroll.style.pointerEvents = 'auto';
     }
-    
-    const data = await response.json();
-
-   document.addEventListener('DOMContentLoaded', function() {
-  document.getElementById('member-count').textContent = '150';
-  document.getElementById('online-count').textContent = '45';
-  document.getElementById('channel-count').textContent = '28';
-});
-  } catch (error) {
-    console.error('❌ Erreur:', error);
-  }
+  });
 }
 
-document.addEventListener('DOMContentLoaded', fetchDiscordStats);
-setInterval(fetchDiscordStats, 30000);
+// ===== CARDS HOVER EFFECT =====
+document.querySelectorAll('.timeline-card, .pilier-card, .grade-box').forEach(card => {
+  card.addEventListener('mouseenter', function() {
+    this.style.transform = 'translateY(-10px)';
+  });
+  
+  card.addEventListener('mouseleave', function() {
+    this.style.transform = 'translateY(0)';
+  });
+});
 
+// ===== PAGE LOAD ANIMATION =====
+window.addEventListener('load', () => {
+  document.body.style.opacity = '1';
+});
+
+// ===== ACTIVE NAV LINK =====
+window.addEventListener('scroll', () => {
+  let current = '';
+  
+  document.querySelectorAll('section').forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (pageYOffset >= sectionTop - 200) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
+
+console.log('✅ Script du 82ème Régiment chargé avec succès !');
