@@ -807,3 +807,136 @@ body {
 .trailer-frame iframe {
   display: block;
   width: 
+/* ===== FIX NAVBAR MOBILE ===== */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none !important;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    flex-direction: column !important;
+    background: linear-gradient(180deg, rgba(6, 13, 26, 0.98), rgba(10, 22, 40, 0.95));
+    gap: 0 !important;
+    border-bottom: 2px solid rgba(201, 168, 76, 0.15);
+    padding: 20px 0;
+    z-index: 999;
+    max-height: 500px;
+    overflow-y: auto;
+  }
+
+  .nav-links.open {
+    display: flex !important;
+  }
+
+  .nav-links li {
+    border-bottom: 1px solid rgba(201, 168, 76, 0.1);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 15px 25px;
+    text-align: left;
+  }
+
+  .nav-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: var(--gold);
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 1001;
+  }
+
+  .nav-toggle:hover {
+    transform: scale(1.1);
+  }
+
+  .btn-discord {
+    display: none;
+  }
+}
+
+/* ===== ANIMATIONS REVEAL ===== */
+.pilier-card,
+.timeline-card,
+.about-text,
+.about-image,
+.step,
+.trailer-info-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ===== ACTIVE NAV LINK =====*/
+.nav-links a.active {
+  color: var(--gold);
+  position: relative;
+}
+
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===== HERO PADDING FIX =====*/
+.hero {
+  margin-top: 70px;
+  padding: 60px 20px 100px;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ===== SECTION PADDING FIX =====*/
+section {
+  scroll-margin-top: 70px;
+}
+
+/* ===== RESPONSIVE FIXES =====*/
+@media (max-width: 480px) {
+  .nav-logo {
+    font-size: 1.1rem;
+  }
+
+  .hero-scroll {
+    font-size: 1.5rem;
+    bottom: 20px;
+  }
+
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .pilier-icon {
+    font-size: 2.5rem;
+  }
+
+  .timeline-date {
+    font-size: 1.2rem;
+  }
+
+  .recrutement-steps {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .step-arrow {
+    display: none;
+  }
+}
